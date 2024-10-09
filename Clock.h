@@ -19,10 +19,10 @@ public:
    string getTime() const;
    string getDate() const;
 
-    int getViewMode() const;
-    void setViewMode(int vm);
+   void printDateTime() const;
 
-    void printDateTime() const;
+    void setViewMode(int mode);
+    int getViewMode() const;
 
 private:
     int viewMode;

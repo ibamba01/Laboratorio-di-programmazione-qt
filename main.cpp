@@ -5,7 +5,7 @@
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     Clock c;
-    c.getTime();
+    c.printDateTime();
     QPushButton button("Hello world!", nullptr);
     button.resize(200, 100);
     button.show();
