@@ -19,6 +19,10 @@ string Clock::getTime() const {
     minuti = to_string(ltm->tm_min);
     secondi = to_string(ltm->tm_sec);
 
-    //check se funziona
+}
+
+void Clock::printDateTime() const {
+    time_t now = time(0);
+    tm * ltm = localtime(&now);
     printf ("Current local time and date: %s", asctime(ltm));
 }

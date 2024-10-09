@@ -21,6 +21,9 @@ public:
 
     int getViewMode() const;
     void setViewMode(int vm);
+
+    void printDateTime() const;
+
 private:
     int viewMode;
 };
