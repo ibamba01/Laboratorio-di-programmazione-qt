@@ -3,7 +3,6 @@
 //
 
 #ifndef LABORATORIO_TIMER_H
-#define LABORATORIO_TIMER_H
 
 
 #include <chrono>
@@ -19,6 +18,7 @@ public:
     //utilizzo const per evitare che la funzione modifichi l'oggetto
     const time_point<steady_clock> &getStart() const;
 
+
     bool setDuration(unsigned int seconds);
     int getDuration() const;
 
@@ -26,13 +26,15 @@ public:
 
     bool isRunning() const;
 
-    int getViewMode() const;
-    void setViewMode(int vm);
-
     bool startTimer();
     bool stopTimer();
+
     void resetTimer();
 
+    void setViewMode(int vm);
+    int getViewMode() const;
+
+    //setduration, stopTimer e startTimer sono dichiarate come bool perchè devono controllare active per effettuare le loro funzioni
 private:
     time_point<steady_clock> start;
     ::duration<int, milli> duration;

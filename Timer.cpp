@@ -19,33 +19,34 @@ const int Timer::secPerHour = 60*60;
 const int Timer::secPerMin = 60;
 
 Timer::Timer() {
-    start = steady_clock::now();
-    duration = ::duration<int>::zero();
+    start = steady_clock::now(); //posso togliere start qui e farlo partire solo con start timer
+    duration = ::duration<int>::zero();// zero() è una funzione statica che restituisce un oggetto duration con valore 0
     active = false;
-    viewMode = 2;
+    viewMode = 1;
 }
-
 
 
 int Timer::getDuration() const{
-    if(!active) {
-        return (int)round(duration.count()/1000);
+    if(!active) {//active false
+        return static_cast<int>(round(duration.count() / 1000.0));
     }
     else{
         time_point<steady_clock> now = steady_clock::now();
-        float r = ((duration - duration_cast<milliseconds>(now-start)).count()/1000.f);
-        int remaining = r >= 0 ? (int)ceil(r) : (int)floor(r);
-        if (remaining < 0){
-            remaining = 0;
+        milliseconds elapsed = chrono::duration_cast<chrono::milliseconds>(now - start);//deve fare il cast per now
+        milliseconds remaining = (duration - elapsed);
+
+        int remainingSeconds = static_cast<int>(std::ceil(remaining.count() / 1000.0));
+        if (remainingSeconds < 0) {
+            remainingSeconds = 0;
         }
-        return remaining;
+        return remainingSeconds;
     }
 }
 
-bool Timer::setDuration(const unsigned int seconds) {
+bool Timer::setDuration(const unsigned int seconds) {//non deve funzionare se il timer è attivo
     if(!active) {
-        if (seconds > 0 && seconds <= secPerDay) {
-            duration = ::duration < int, milli > (seconds * 1000);
+        if (seconds > 0 && seconds <= secPerDay) { //limito la durata massima a 24 ore
+            duration = ::duration < int, milli > (seconds * 1000); //trasformo i secondi in millisecondi
             return true;
         }
         return false;
@@ -54,24 +55,25 @@ bool Timer::setDuration(const unsigned int seconds) {
 }
 
 
-
 bool Timer::startTimer(){
-    if(duration != ::duration<int>::zero()) {
-        if (!active || getDuration() < 0) {
+    if(duration != ::duration<int>::zero()) { //controllo che la duratta sia stata impostata
+        if (!active) {
             start = steady_clock::now();
             active = true;
             return true;
         }
         return false;
     }
-    throw bad_function_call();  //Before starting timer you need to set duration
+    throw bad_function_call();
 }
 
 bool Timer::stopTimer() {
     if(active){
         time_point<steady_clock> now = steady_clock::now();
+        ::duration<int, milli> remaining = duration - chrono::duration_cast<chrono::seconds>(now - start); //remainning è in secondi
+
         active = false;
-        ::duration<int, milli> remaining = duration - duration_cast<seconds>(now - start);
+
         if(remaining.count() > 0) {
             duration = remaining;
             return true;
