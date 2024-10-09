@@ -14,14 +14,21 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(Laboratorio main.cpp
+add_executable(Laboratorio
+        main.cpp
         qtclock.cpp
         qtclock.h
         qtclock.ui
         Timer.cpp
         Timer.h
         Clock.cpp
-        Clock.h)
+        Clock.h
+        cronometro.cpp
+        cronometro.h
+        digitalclock.cpp
+        digitalclock.h
+        digitalclock.ui
+)
 target_link_libraries(Laboratorio
         Qt::Core
         Qt::Gui

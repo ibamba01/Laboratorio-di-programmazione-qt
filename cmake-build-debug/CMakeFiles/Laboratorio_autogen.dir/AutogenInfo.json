@@ -271,6 +271,18 @@
 			null
 		],
 		[
+			"C:/Users/Pietro/CLionProjects/Laboratorio/cronometro.h",
+			"MU",
+			"EWIEGA46WW/moc_cronometro.cpp",
+			null
+		],
+		[
+			"C:/Users/Pietro/CLionProjects/Laboratorio/digitalclock.h",
+			"MU",
+			"EWIEGA46WW/moc_digitalclock.cpp",
+			null
+		],
+		[
 			"C:/Users/Pietro/CLionProjects/Laboratorio/qtclock.h",
 			"MU",
 			"EWIEGA46WW/moc_qtclock.cpp",
@@ -351,6 +363,16 @@
 	[
 		[ "C:/Users/Pietro/CLionProjects/Laboratorio/Clock.cpp", "MU", null ],
 		[ "C:/Users/Pietro/CLionProjects/Laboratorio/Timer.cpp", "MU", null ],
+		[
+			"C:/Users/Pietro/CLionProjects/Laboratorio/cronometro.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Pietro/CLionProjects/Laboratorio/digitalclock.cpp",
+			"MU",
+			null
+		],
 		[ "C:/Users/Pietro/CLionProjects/Laboratorio/main.cpp", "MU", null ],
 		[ "C:/Users/Pietro/CLionProjects/Laboratorio/qtclock.cpp", "MU", null ]
 	],
