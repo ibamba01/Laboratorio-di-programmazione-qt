@@ -1,0 +1,9 @@
+# ninja log v6
+50	1677	7501249658161144	Laboratorio_autogen/timestamp	73f62a0f17bf38dc
+1686	7757	7501249659551126	CMakeFiles/Laboratorio.dir/qtclock.cpp.obj	57b4964f7e112769
+50	1677	7501249658161144	Laboratorio_autogen/mocs_compilation.cpp	73f62a0f17bf38dc
+50	1677	7501249658161144	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/timestamp	73f62a0f17bf38dc
+50	1677	7501249658161144	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/mocs_compilation.cpp	73f62a0f17bf38dc
+1679	7646	7501249659478209	CMakeFiles/Laboratorio.dir/Laboratorio_autogen/mocs_compilation.cpp.obj	fc0a94aca9ac0eb1
+445	7338	7501248305587894	CMakeFiles/Laboratorio.dir/main.cpp.obj	e8f02f8ed56150d4
+7757	8733	7501249720262363	Laboratorio.exe	b5544749a088e128

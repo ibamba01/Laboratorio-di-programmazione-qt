@@ -1,0 +1,5 @@
+C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/CMakeFiles/Laboratorio.dir
+C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/CMakeFiles/Laboratorio_autogen_timestamp_deps.dir
+C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/CMakeFiles/Laboratorio_autogen.dir
