@@ -4,7 +4,7 @@
 
 #include "Timer.h"
 #include <chrono>
-#include <math.h>
+#include <cmath>
 #include <functional>
 #include <string>
 
@@ -14,8 +14,8 @@ using namespace std::chrono;
 using namespace std;
 using namespace std::chrono;
 
-const int Timer::secPerDay = 60*60*24;
-const int Timer::secPerHour = 60*60;
+const int Timer::secPerDay = 86400;
+const int Timer::secPerHour = 3600;
 const int Timer::secPerMin = 60;
 
 Timer::Timer() {
@@ -35,7 +35,7 @@ int Timer::getDuration() const{
         milliseconds elapsed = chrono::duration_cast<chrono::milliseconds>(now - start);//deve fare il cast per now
         milliseconds remaining = (duration - elapsed);
 
-        int remainingSeconds = static_cast<int>(std::ceil(remaining.count() / 1000.0));
+        int remainingSeconds = static_cast<int>(ceil(remaining.count() / 1000.0));
         if (remainingSeconds < 0) {
             remainingSeconds = 0;
         }
@@ -96,7 +96,7 @@ int Timer::getViewMode() const {return viewMode;}
 
 string Timer::getDurationString() {
     int hours, minutes, seconds = getDuration();
-    string s, temp;
+    string uscita, temp;
 
     hours = seconds / secPerHour;
     minutes = (seconds - hours*secPerHour) / secPerMin;
@@ -105,26 +105,26 @@ string Timer::getDurationString() {
     switch(viewMode){
         case 1:
             if (hours){
-                s = s + to_string(hours) + " h, ";
+                uscita = uscita + to_string(hours) + " h, ";
             }
             if (hours || minutes) {
-                s = s + to_string(minutes) + " m, ";
+                uscita = uscita + to_string(minutes) + " m, ";
             }
-            s = s + to_string(seconds) + " s";
+            uscita = uscita + to_string(seconds) + " s";
             break;
         case 2:
-            s = to_string(hours);
-            s += ":";
-            s += ((temp = to_string(minutes)).length() == 2) ? temp : "0"+temp;
-            s += ":";
-            s += ((temp = to_string(seconds)).length() == 2) ? temp : "0"+temp;
+            uscita = to_string(hours);
+            uscita += ":";
+            uscita += ((temp = to_string(minutes)).length() == 2) ? temp : "0"+temp;
+            uscita += ":";
+            uscita += ((temp = to_string(seconds)).length() == 2) ? temp : "0"+temp;
             break;
         default:
-            s = to_string(getDuration()) + " s";
+            uscita = to_string(getDuration()) + " s";
     }
-    if (s.length()%2 == 0){
-        s.replace(s.find(" s"), 2, "  s");
+    if (uscita.length()%2 == 0){
+        uscita.replace(uscita.find(" s"), 2, "  s");
     }
-    return s;
+    return uscita;
 }
 //prova di update

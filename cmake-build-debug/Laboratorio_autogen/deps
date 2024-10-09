@@ -596,6 +596,10 @@ Laboratorio_autogen/timestamp: \
 	C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
 	C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessAliasTargets.cmake \
 	C:/Users/Pietro/CLionProjects/Laboratorio/CMakeLists.txt \
+	C:/Users/Pietro/CLionProjects/Laboratorio/Clock.cpp \
+	C:/Users/Pietro/CLionProjects/Laboratorio/Clock.h \
+	C:/Users/Pietro/CLionProjects/Laboratorio/Timer.cpp \
+	C:/Users/Pietro/CLionProjects/Laboratorio/Timer.h \
 	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/CMakeFiles/3.29.6/CMakeCCompiler.cmake \
 	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake \
 	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/CMakeFiles/3.29.6/CMakeRCCompiler.cmake \

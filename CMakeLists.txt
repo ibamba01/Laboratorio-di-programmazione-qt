@@ -19,7 +19,9 @@ add_executable(Laboratorio main.cpp
         qtclock.h
         qtclock.ui
         Timer.cpp
-        Timer.h)
+        Timer.h
+        Clock.cpp
+        Clock.h)
 target_link_libraries(Laboratorio
         Qt::Core
         Qt::Gui
