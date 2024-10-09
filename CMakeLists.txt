@@ -16,18 +16,21 @@ find_package(Qt6 COMPONENTS
 
 add_executable(Laboratorio
         main.cpp
-        qtclock.cpp
-        qtclock.h
-        qtclock.ui
-        Timer.cpp
-        Timer.h
-        Clock.cpp
-        Clock.h
-        cronometro.cpp
-        cronometro.h
-        digitalclock.cpp
-        digitalclock.h
-        digitalclock.ui
+        "Non QT classes/Timer.cpp"
+        "Non QT classes/Timer.h"
+        "Non QT classes/Clock.cpp"
+        "Non QT classes/Clock.h"
+        "Non QT classes/cronometro.cpp"
+        "Non QT classes/cronometro.h"
+        "../esempiqt/QT classes clock/digitalclock.cpp"
+        "../esempiqt/QT classes clock/digitalclock.h"
+        "../esempiqt/QT classes clock/digitalclock.ui"
+        "QT classes timer/digitaltimer.cpp"
+        "QT classes timer/digitaltimer.h"
+        "QT classes timer/digitaltimer.ui"
+        GUI/mainpage.cpp
+        GUI/mainpage.h
+        GUI/mainpage.ui
 )
 target_link_libraries(Laboratorio
         Qt::Core

@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLCDNumber>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +21,7 @@ class Ui_Digitalclock
 {
 public:
     QLCDNumber *Digitalclock_2;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *Digitalclock)
     {
@@ -29,6 +31,9 @@ public:
         Digitalclock_2 = new QLCDNumber(Digitalclock);
         Digitalclock_2->setObjectName("Digitalclock_2");
         Digitalclock_2->setGeometry(QRect(120, 90, 141, 81));
+        pushButton = new QPushButton(Digitalclock);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(120, 170, 141, 41));
 
         retranslateUi(Digitalclock);
 
@@ -38,6 +43,7 @@ public:
     void retranslateUi(QWidget *Digitalclock)
     {
         Digitalclock->setWindowTitle(QCoreApplication::translate("Digitalclock", "Digitalclock", nullptr));
+        pushButton->setText(QCoreApplication::translate("Digitalclock", "PushButton", nullptr));
     } // retranslateUi
 
 };

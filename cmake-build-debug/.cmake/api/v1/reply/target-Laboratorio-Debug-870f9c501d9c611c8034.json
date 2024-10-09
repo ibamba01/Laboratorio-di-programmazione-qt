@@ -42,7 +42,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 32,
+				"line" : 35,
 				"parent" : 0
 			},
 			{
@@ -209,10 +209,11 @@
 				0,
 				1,
 				2,
-				5,
-				7,
-				9,
-				11
+				4,
+				6,
+				8,
+				11,
+				14
 			]
 		}
 	],
@@ -307,10 +308,11 @@
 				0,
 				1,
 				2,
-				5,
-				7,
-				9,
-				11
+				4,
+				6,
+				8,
+				11,
+				14
 			]
 		},
 		{
@@ -318,28 +320,31 @@
 			"sourceIndexes" : 
 			[
 				3,
-				6,
-				8,
-				10,
+				5,
+				7,
+				9,
 				12,
-				14,
-				15
+				15,
+				17,
+				18,
+				19
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				4,
+				10,
 				13,
-				16
+				16,
+				20
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				17
+				21
 			]
 		}
 	],
@@ -361,78 +366,100 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "qtclock.cpp",
+			"path" : "Non QT classes/Timer.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "qtclock.h",
+			"path" : "Non QT classes/Timer.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "qtclock.ui",
+			"compileGroupIndex" : 0,
+			"path" : "Non QT classes/Clock.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Non QT classes/Clock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Non QT classes/cronometro.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Non QT classes/cronometro.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "QT classes clock/digitalclock.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "QT classes clock/digitalclock.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "QT classes clock/digitalclock.ui",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Timer.cpp",
+			"path" : "QT classes timer/digitaltimer.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Timer.h",
+			"path" : "QT classes timer/digitaltimer.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "QT classes timer/digitaltimer.ui",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Clock.cpp",
+			"path" : "mainpage.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Clock.h",
+			"path" : "mainpage.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "cronometro.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "cronometro.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "digitalclock.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "digitalclock.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "digitalclock.ui",
+			"path" : "mainpage.ui",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/Laboratorio_autogen/include/ui_qtclock.h",
+			"path" : "cmake-build-debug/Laboratorio_autogen/include/QT classes clock/ui_digitalclock.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/Laboratorio_autogen/include/ui_digitalclock.h",
+			"path" : "cmake-build-debug/Laboratorio_autogen/include/QT classes timer/ui_digitaltimer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/Laboratorio_autogen/include/ui_mainpage.h",
 			"sourceGroupIndex" : 1
 		},
 		{

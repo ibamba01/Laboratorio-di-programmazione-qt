@@ -3,8 +3,8 @@
     <author/>
     <comment/>
     <exportmacro/>
-    <class>QtClock</class>
-    <widget class="QWidget" name="QtClock">
+    <class>mainpage</class>
+    <widget class="QWidget" name="mainpage">
         <property name="geometry">
             <rect>
                 <x>0</x>
@@ -14,7 +14,7 @@
             </rect>
         </property>
         <property name="windowTitle">
-            <string>QtClock</string>
+            <string>mainpage</string>
         </property>
     </widget>
     <pixmapfunction/>

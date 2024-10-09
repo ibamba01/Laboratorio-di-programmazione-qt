@@ -1,8 +1,8 @@
 #include <QApplication>
 #include <QPushButton>
 #include <QLCDNumber>
-#include "Clock.h"
-#include "digitalclock.h"
+#include "Non QT classes//Clock.h"
+#include "QT classes clock/digitalclock.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
