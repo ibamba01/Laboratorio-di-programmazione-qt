@@ -20,13 +20,13 @@ add_executable(Laboratorio
         "Non QT classes/Timer.h"
         "Non QT classes/Clock.cpp"
         "Non QT classes/Clock.h"
-        "Non QT classes/cronometro.cpp"
-        "Non QT classes/cronometro.h"
         GUI/mainpage.cpp
         GUI/mainpage.h
         GUI/mainpage.ui
         "QT classes/QtTimer.cpp"
         "QT classes/QtTimer.h"
+        "QT classes/QtClock.cpp"
+        "QT classes/QtClock.h"
 )
 target_link_libraries(Laboratorio
         Qt::Core

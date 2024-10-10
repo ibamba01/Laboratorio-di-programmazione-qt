@@ -283,6 +283,12 @@
 			null
 		],
 		[
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtClock.h",
+			"MU",
+			"FXMDLGC4MH/moc_QtClock.cpp",
+			null
+		],
+		[
 			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtTimer.h",
 			"MU",
 			"FXMDLGC4MH/moc_QtTimer.cpp",
@@ -378,6 +384,11 @@
 		],
 		[
 			"C:/Users/Pietro/CLionProjects/Laboratorio/Non QT classes/cronometro.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtClock.cpp",
 			"MU",
 			null
 		],

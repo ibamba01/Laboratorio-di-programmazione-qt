@@ -22,7 +22,6 @@ public:
    void printDateTime() const;
    void printprova(string s) const;
 
-
    void setViewMode(int mode);
    int getViewMode() const;
 

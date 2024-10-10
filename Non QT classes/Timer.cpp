@@ -7,6 +7,8 @@
 #include <cmath>
 #include <functional>
 #include <string>
+#include <iostream>
+
 
 using namespace std;
 using namespace std::chrono;
@@ -17,6 +19,11 @@ using namespace std::chrono;
 const int Timer::secPerDay = 86400;
 const int Timer::secPerHour = 3600;
 const int Timer::secPerMin = 60;
+
+void Timer::printprova(string s) const {
+    cout << s << endl;
+}
+
 
 Timer::Timer() {
     start = steady_clock::now(); //posso togliere start qui e farlo partire solo con start timer

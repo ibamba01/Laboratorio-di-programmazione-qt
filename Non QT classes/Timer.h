@@ -30,6 +30,7 @@ public:
     bool stopTimer();
 
     void resetTimer();
+    void printprova(string s) const;
 
     void setViewMode(int vm);
     int getViewMode() const;
