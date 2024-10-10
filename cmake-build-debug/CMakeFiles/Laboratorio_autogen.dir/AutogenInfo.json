@@ -277,9 +277,9 @@
 			null
 		],
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/Date.h",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtChronometer.h",
 			"MU",
-			"FXMDLGC4MH/moc_Date.cpp",
+			"FXMDLGC4MH/moc_QtChronometer.cpp",
 			null
 		],
 		[
@@ -383,7 +383,7 @@
 			null
 		],
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/Date.cpp",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtChronometer.cpp",
 			"MU",
 			null
 		],

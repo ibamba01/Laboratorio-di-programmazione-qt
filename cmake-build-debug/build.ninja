@@ -105,9 +105,9 @@ build CMakeFiles/Laboratorio.dir/QT_classes/QtClock.cpp.obj: CXX_COMPILER__Labor
   OBJECT_DIR = CMakeFiles\Laboratorio.dir
   OBJECT_FILE_DIR = CMakeFiles\Laboratorio.dir\QT_classes
 
-build CMakeFiles/Laboratorio.dir/QT_classes/Date.cpp.obj: CXX_COMPILER__Laboratorio_unscanned_Debug C$:/Users/Pietro/CLionProjects/Laboratorio/QT$ classes/Date.cpp || cmake_object_order_depends_target_Laboratorio
+build CMakeFiles/Laboratorio.dir/QT_classes/QtChronometer.cpp.obj: CXX_COMPILER__Laboratorio_unscanned_Debug C$:/Users/Pietro/CLionProjects/Laboratorio/QT$ classes/QtChronometer.cpp || cmake_object_order_depends_target_Laboratorio
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Laboratorio.dir\QT_classes\Date.cpp.obj.d
+  DEP_FILE = CMakeFiles\Laboratorio.dir\QT_classes\QtChronometer.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtGui -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\Laboratorio.dir
@@ -121,7 +121,7 @@ build CMakeFiles/Laboratorio.dir/QT_classes/Date.cpp.obj: CXX_COMPILER__Laborato
 #############################################
 # Link the executable Laboratorio.exe
 
-build Laboratorio.exe: CXX_EXECUTABLE_LINKER__Laboratorio_Debug CMakeFiles/Laboratorio.dir/Laboratorio_autogen/mocs_compilation.cpp.obj CMakeFiles/Laboratorio.dir/main.cpp.obj CMakeFiles/Laboratorio.dir/Non_QT_classes/Timer.cpp.obj CMakeFiles/Laboratorio.dir/Non_QT_classes/Clock.cpp.obj CMakeFiles/Laboratorio.dir/GUI/mainpage.cpp.obj CMakeFiles/Laboratorio.dir/QT_classes/QtTimer.cpp.obj CMakeFiles/Laboratorio.dir/QT_classes/QtClock.cpp.obj CMakeFiles/Laboratorio.dir/QT_classes/Date.cpp.obj | C$:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Core.a || Laboratorio_autogen Laboratorio_autogen_timestamp_deps
+build Laboratorio.exe: CXX_EXECUTABLE_LINKER__Laboratorio_Debug CMakeFiles/Laboratorio.dir/Laboratorio_autogen/mocs_compilation.cpp.obj CMakeFiles/Laboratorio.dir/main.cpp.obj CMakeFiles/Laboratorio.dir/Non_QT_classes/Timer.cpp.obj CMakeFiles/Laboratorio.dir/Non_QT_classes/Clock.cpp.obj CMakeFiles/Laboratorio.dir/GUI/mainpage.cpp.obj CMakeFiles/Laboratorio.dir/QT_classes/QtTimer.cpp.obj CMakeFiles/Laboratorio.dir/QT_classes/QtClock.cpp.obj CMakeFiles/Laboratorio.dir/QT_classes/QtChronometer.cpp.obj | C$:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Core.a || Laboratorio_autogen Laboratorio_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Laboratorio.dir

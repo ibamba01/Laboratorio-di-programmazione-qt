@@ -27,6 +27,8 @@ add_executable(Laboratorio
         "QT classes/QtTimer.h"
         "QT classes/QtClock.cpp"
         "QT classes/QtClock.h"
+        "QT classes/QtChronometer.cpp"
+        "QT classes/QtChronometer.h"
 )
 target_link_libraries(Laboratorio
         Qt::Core
