@@ -277,9 +277,9 @@
 			null
 		],
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/Non QT classes/cronometro.h",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/Date.h",
 			"MU",
-			"SB4EULUBIA/moc_cronometro.cpp",
+			"FXMDLGC4MH/moc_Date.cpp",
 			null
 		],
 		[
@@ -383,7 +383,7 @@
 			null
 		],
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/Non QT classes/cronometro.cpp",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/Date.cpp",
 			"MU",
 			null
 		],

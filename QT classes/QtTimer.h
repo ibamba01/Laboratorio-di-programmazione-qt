@@ -12,7 +12,7 @@
 class QtTimer {
 public:
     QtTimer();
-    ~QtTimer();
+    ~QtTimer() = default;
 
     //controllano che time non sia attivo
     bool startTimer();
@@ -26,7 +26,7 @@ public:
     bool isRunning() const;
 
 private:
-    QTimer * timer; //serve per accedere alla funzione timeout di Singal per aggiornare in autimatico il tempo
+    QTimer  timer; //serve per accedere alla funzione timeout di Singal per aggiornare in autimatico il tempo
     // bool active; QTimer ha già un metodo per vedere se è attivo o no
 };
 

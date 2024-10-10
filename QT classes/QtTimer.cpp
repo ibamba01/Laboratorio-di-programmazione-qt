@@ -6,46 +6,46 @@
 #include "QtTimer.h"
 
 
-QtTimer::QtTimer() : timer(new QTimer){
+QtTimer::QtTimer() {
 }
 
-QtTimer::~QtTimer() {
-    delete timer;
-}
+//QtTimer::~QtTimer() {
+  //  delete timer;
+//}
 
 bool QtTimer::isRunning() const {
-    return timer->isActive();
+    return timer.isActive();
 }
 
 bool QtTimer::startTimer() {
     if (isRunning())
         return false;
-    timer->start();
+    timer.start();
     return true;
 }
 
 bool QtTimer::stopTimer(){
     if (!isRunning())
         return false;
-    timer->stop();
+    timer.stop();
     return true;
 }
 
-bool QtTimer::setTimer(QTime time) { //imposta il timer a
+bool QtTimer::setTimer(QTime time) { //imposta il timer
     if (isRunning())
         return false;
-    timer->setInterval(time.msec());
+    timer.setInterval(time.msec());
     return true;
 }
 
 void QtTimer::pause() {
-    int remainingTime = timer->remainingTime(); //remainingTime ha bisogno che il timer sia attivo
-    timer->stop();
-    timer->setInterval(remainingTime);
+    int remainingTime = timer.remainingTime(); //remainingTime ha bisogno che il timer sia attivo
+    timer.stop();
+    timer.setInterval(remainingTime);
 }
 
 QString QtTimer::GetTimeString() const {
-    int totalSeconds = timer->remainingTime() / 1000;
+    int totalSeconds = timer.remainingTime() / 1000;
 
     int hours = totalSeconds / 3600;
     int minutes = (totalSeconds % 3600) / 60; // % restituisce il resto della divisione

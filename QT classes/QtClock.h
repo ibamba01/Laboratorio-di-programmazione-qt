@@ -17,7 +17,7 @@ class QtClock {
 public:
     QtClock();
     ~QtClock();
-    void setTime(int h, int m, int s);
+    void setTime(int h, int m, int s); //faccio passare l'ora e data da mainpage
     void setDate(int d, int m, int y);
 
     QString showTime() const;
@@ -28,8 +28,8 @@ public:
 
 
 private:
-    QTime * Time;
-    QDate * Date;
+    QTime Time;
+    QDate Date;
     TimeFormat viewModeTime;
     DateFormat viewModeDate;
 };
