@@ -89,29 +89,21 @@ build CMakeFiles/Laboratorio.dir/Non_QT_classes/cronometro.cpp.obj: CXX_COMPILER
   OBJECT_DIR = CMakeFiles\Laboratorio.dir
   OBJECT_FILE_DIR = CMakeFiles\Laboratorio.dir\Non_QT_classes
 
-build CMakeFiles/Laboratorio.dir/QT_classes_clock/digitalclock.cpp.obj: CXX_COMPILER__Laboratorio_unscanned_Debug C$:/Users/Pietro/CLionProjects/Laboratorio/QT$ classes$ clock/digitalclock.cpp || cmake_object_order_depends_target_Laboratorio
+build CMakeFiles/Laboratorio.dir/GUI/mainpage.cpp.obj: CXX_COMPILER__Laboratorio_unscanned_Debug C$:/Users/Pietro/CLionProjects/Laboratorio/GUI/mainpage.cpp || cmake_object_order_depends_target_Laboratorio
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Laboratorio.dir\QT_classes_clock\digitalclock.cpp.obj.d
+  DEP_FILE = CMakeFiles\Laboratorio.dir\GUI\mainpage.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtGui -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\Laboratorio.dir
-  OBJECT_FILE_DIR = CMakeFiles\Laboratorio.dir\QT_classes_clock
+  OBJECT_FILE_DIR = CMakeFiles\Laboratorio.dir\GUI
 
-build CMakeFiles/Laboratorio.dir/QT_classes_timer/digitaltimer.cpp.obj: CXX_COMPILER__Laboratorio_unscanned_Debug C$:/Users/Pietro/CLionProjects/Laboratorio/QT$ classes$ timer/digitaltimer.cpp || cmake_object_order_depends_target_Laboratorio
+build CMakeFiles/Laboratorio.dir/QT_classes/QtTimer.cpp.obj: CXX_COMPILER__Laboratorio_unscanned_Debug C$:/Users/Pietro/CLionProjects/Laboratorio/QT$ classes/QtTimer.cpp || cmake_object_order_depends_target_Laboratorio
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Laboratorio.dir\QT_classes_timer\digitaltimer.cpp.obj.d
+  DEP_FILE = CMakeFiles\Laboratorio.dir\QT_classes\QtTimer.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -isystem C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtGui -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets
   OBJECT_DIR = CMakeFiles\Laboratorio.dir
-  OBJECT_FILE_DIR = CMakeFiles\Laboratorio.dir\QT_classes_timer
-
-build CMakeFiles/Laboratorio.dir/mainpage.cpp.obj: CXX_COMPILER__Laboratorio_unscanned_Debug C$:/Users/Pietro/CLionProjects/Laboratorio/mainpage.cpp || cmake_object_order_depends_target_Laboratorio
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Laboratorio.dir\mainpage.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -isystem C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/include -isystem C:/Qt/6.8.0/mingw_64/include/QtCore -isystem C:/Qt/6.8.0/mingw_64/include -isystem C:/Qt/6.8.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.0/mingw_64/include/QtGui -isystem C:/Qt/6.8.0/mingw_64/include/QtWidgets
-  OBJECT_DIR = CMakeFiles\Laboratorio.dir
-  OBJECT_FILE_DIR = CMakeFiles\Laboratorio.dir
+  OBJECT_FILE_DIR = CMakeFiles\Laboratorio.dir\QT_classes
 
 
 # =============================================================================
@@ -121,7 +113,7 @@ build CMakeFiles/Laboratorio.dir/mainpage.cpp.obj: CXX_COMPILER__Laboratorio_uns
 #############################################
 # Link the executable Laboratorio.exe
 
-build Laboratorio.exe: CXX_EXECUTABLE_LINKER__Laboratorio_Debug CMakeFiles/Laboratorio.dir/Laboratorio_autogen/mocs_compilation.cpp.obj CMakeFiles/Laboratorio.dir/main.cpp.obj CMakeFiles/Laboratorio.dir/Non_QT_classes/Timer.cpp.obj CMakeFiles/Laboratorio.dir/Non_QT_classes/Clock.cpp.obj CMakeFiles/Laboratorio.dir/Non_QT_classes/cronometro.cpp.obj CMakeFiles/Laboratorio.dir/QT_classes_clock/digitalclock.cpp.obj CMakeFiles/Laboratorio.dir/QT_classes_timer/digitaltimer.cpp.obj CMakeFiles/Laboratorio.dir/mainpage.cpp.obj | C$:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Core.a || Laboratorio_autogen Laboratorio_autogen_timestamp_deps
+build Laboratorio.exe: CXX_EXECUTABLE_LINKER__Laboratorio_Debug CMakeFiles/Laboratorio.dir/Laboratorio_autogen/mocs_compilation.cpp.obj CMakeFiles/Laboratorio.dir/main.cpp.obj CMakeFiles/Laboratorio.dir/Non_QT_classes/Timer.cpp.obj CMakeFiles/Laboratorio.dir/Non_QT_classes/Clock.cpp.obj CMakeFiles/Laboratorio.dir/Non_QT_classes/cronometro.cpp.obj CMakeFiles/Laboratorio.dir/GUI/mainpage.cpp.obj CMakeFiles/Laboratorio.dir/QT_classes/QtTimer.cpp.obj | C$:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.0/mingw_64/lib/libQt6Core.a || Laboratorio_autogen Laboratorio_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/6.8.0/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Laboratorio.dir
@@ -164,7 +156,7 @@ build Laboratorio_autogen_timestamp_deps: phony
 #############################################
 # Utility command for Laboratorio_autogen
 
-build Laboratorio_autogen: phony CMakeFiles/Laboratorio_autogen Laboratorio_autogen/include/QT$ classes$ clock/ui_digitalclock.h Laboratorio_autogen/include/QT$ classes$ timer/ui_digitaltimer.h Laboratorio_autogen/include/ui_mainpage.h Laboratorio_autogen/timestamp Laboratorio_autogen/mocs_compilation.cpp Laboratorio_autogen_timestamp_deps
+build Laboratorio_autogen: phony CMakeFiles/Laboratorio_autogen Laboratorio_autogen/include/GUI/ui_mainpage.h Laboratorio_autogen/timestamp Laboratorio_autogen/mocs_compilation.cpp Laboratorio_autogen_timestamp_deps
 
 
 #############################################
@@ -181,7 +173,7 @@ build Laboratorio_autogen/timestamp Laboratorio_autogen/mocs_compilation.cpp | $
 #############################################
 # Phony custom command for CMakeFiles\Laboratorio_autogen
 
-build CMakeFiles/Laboratorio_autogen Laboratorio_autogen/include/QT$ classes$ clock/ui_digitalclock.h Laboratorio_autogen/include/QT$ classes$ timer/ui_digitaltimer.h Laboratorio_autogen/include/ui_mainpage.h | ${cmake_ninja_workdir}CMakeFiles/Laboratorio_autogen ${cmake_ninja_workdir}Laboratorio_autogen/include/QT$ classes$ clock/ui_digitalclock.h ${cmake_ninja_workdir}Laboratorio_autogen/include/QT$ classes$ timer/ui_digitaltimer.h ${cmake_ninja_workdir}Laboratorio_autogen/include/ui_mainpage.h: phony Laboratorio_autogen/timestamp || Laboratorio_autogen_timestamp_deps
+build CMakeFiles/Laboratorio_autogen Laboratorio_autogen/include/GUI/ui_mainpage.h | ${cmake_ninja_workdir}CMakeFiles/Laboratorio_autogen ${cmake_ninja_workdir}Laboratorio_autogen/include/GUI/ui_mainpage.h: phony Laboratorio_autogen/timestamp || Laboratorio_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

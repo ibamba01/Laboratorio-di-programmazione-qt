@@ -95,36 +95,30 @@ bool Timer::isRunning() const {return active;}
 int Timer::getViewMode() const {return viewMode;}
 
 string Timer::getDurationString() {
-    int hours, minutes, seconds = getDuration();
-    string uscita, temp;
+    int totalSeconds = getDuration();
 
-    hours = seconds / secPerHour;
-    minutes = (seconds - hours*secPerHour) / secPerMin;
-    seconds = seconds - hours*secPerHour - minutes*secPerMin;
+    int hours = totalSeconds / secPerHour;
+    int minutes = (totalSeconds % secPerHour) / secPerMin; // % restituisce il resto della divisione
+    int seconds = totalSeconds % secPerMin;
 
+    ostringstream uscita;
+    uscita << setfill('0'); //riempie con 0 i campi vuoti, rimane attivo fino a che non viene sovrascritto
     switch(viewMode){
-        case 1:
+        case 1: // visualizza il tempo rimanente in base a quanto manca
             if (hours){
-                uscita = uscita + to_string(hours) + " h, ";
+                uscita << hours << " h, ";
             }
-            if (hours || minutes) {
-                uscita = uscita + to_string(minutes) + " m, ";
+            if (minutes){
+                uscita << minutes << " m, ";
             }
-            uscita = uscita + to_string(seconds) + " s";
+            uscita << seconds << " s";
             break;
-        case 2:
-            uscita = to_string(hours);
-            uscita += ":";
-            uscita += ((temp = to_string(minutes)).length() == 2) ? temp : "0"+temp;
-            uscita += ":";
-            uscita += ((temp = to_string(seconds)).length() == 2) ? temp : "0"+temp;
+        case 2: // visulaizza il tempo rimanente in formato hh:mm:ss
+            uscita << setw(2)  << hours << ":" << setw(2) << minutes << ":" << setw(2)  << seconds;
             break;
-        default:
-            uscita = to_string(getDuration()) + " s";
+        default: // visualizza il tempo rimanente in secondi
+            uscita << totalSeconds << " s";
     }
-    if (uscita.length()%2 == 0){
-        uscita.replace(uscita.find(" s"), 2, "  s");
-    }
-    return uscita;
+    return uscita.str();
 }
 //prova di update

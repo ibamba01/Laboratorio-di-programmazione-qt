@@ -259,6 +259,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/Pietro/CLionProjects/Laboratorio/GUI/mainpage.h",
+			"MU",
+			"2LCCYRVYXB/moc_mainpage.cpp",
+			null
+		],
+		[
 			"C:/Users/Pietro/CLionProjects/Laboratorio/Non QT classes/Clock.h",
 			"MU",
 			"SB4EULUBIA/moc_Clock.cpp",
@@ -277,21 +283,9 @@
 			null
 		],
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes clock/digitalclock.h",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtTimer.h",
 			"MU",
-			"UKWNHKO4XE/moc_digitalclock.cpp",
-			null
-		],
-		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes timer/digitaltimer.h",
-			"MU",
-			"MFVSZMKMNJ/moc_digitaltimer.cpp",
-			null
-		],
-		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.h",
-			"MU",
-			"EWIEGA46WW/moc_mainpage.cpp",
+			"FXMDLGC4MH/moc_QtTimer.cpp",
 			null
 		]
 	],
@@ -368,6 +362,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/Pietro/CLionProjects/Laboratorio/GUI/mainpage.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/Pietro/CLionProjects/Laboratorio/Non QT classes/Clock.cpp",
 			"MU",
 			null
@@ -383,17 +382,11 @@
 			null
 		],
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes clock/digitalclock.cpp",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtTimer.cpp",
 			"MU",
 			null
 		],
-		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes timer/digitaltimer.cpp",
-			"MU",
-			null
-		],
-		[ "C:/Users/Pietro/CLionProjects/Laboratorio/main.cpp", "MU", null ],
-		[ "C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.cpp", "MU", null ]
+		[ "C:/Users/Pietro/CLionProjects/Laboratorio/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

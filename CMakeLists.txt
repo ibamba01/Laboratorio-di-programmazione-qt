@@ -22,15 +22,11 @@ add_executable(Laboratorio
         "Non QT classes/Clock.h"
         "Non QT classes/cronometro.cpp"
         "Non QT classes/cronometro.h"
-        "../esempiqt/QT classes clock/digitalclock.cpp"
-        "../esempiqt/QT classes clock/digitalclock.h"
-        "../esempiqt/QT classes clock/digitalclock.ui"
-        "QT classes timer/digitaltimer.cpp"
-        "QT classes timer/digitaltimer.h"
-        "QT classes timer/digitaltimer.ui"
         GUI/mainpage.cpp
         GUI/mainpage.h
         GUI/mainpage.ui
+        "QT classes/QtTimer.cpp"
+        "QT classes/QtTimer.h"
 )
 target_link_libraries(Laboratorio
         Qt::Core

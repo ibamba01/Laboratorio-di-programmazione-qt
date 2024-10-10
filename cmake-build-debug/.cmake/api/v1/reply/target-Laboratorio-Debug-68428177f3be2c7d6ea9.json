@@ -42,7 +42,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 35,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
@@ -212,8 +212,7 @@
 				4,
 				6,
 				8,
-				11,
-				14
+				11
 			]
 		}
 	],
@@ -311,8 +310,7 @@
 				4,
 				6,
 				8,
-				11,
-				14
+				11
 			]
 		},
 		{
@@ -324,10 +322,7 @@
 				7,
 				9,
 				12,
-				15,
-				17,
-				18,
-				19
+				13
 			]
 		},
 		{
@@ -335,16 +330,14 @@
 			"sourceIndexes" : 
 			[
 				10,
-				13,
-				16,
-				20
+				14
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				21
+				15
 			]
 		}
 	],
@@ -399,67 +392,34 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "QT classes clock/digitalclock.cpp",
+			"path" : "GUI/mainpage.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "QT classes clock/digitalclock.h",
+			"path" : "GUI/mainpage.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "QT classes clock/digitalclock.ui",
+			"path" : "GUI/mainpage.ui",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "QT classes timer/digitaltimer.cpp",
+			"path" : "QT classes/QtTimer.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "QT classes timer/digitaltimer.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "QT classes timer/digitaltimer.ui",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "mainpage.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "mainpage.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "mainpage.ui",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "cmake-build-debug/Laboratorio_autogen/include/QT classes clock/ui_digitalclock.h",
+			"path" : "QT classes/QtTimer.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/Laboratorio_autogen/include/QT classes timer/ui_digitaltimer.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "cmake-build-debug/Laboratorio_autogen/include/ui_mainpage.h",
+			"path" : "cmake-build-debug/Laboratorio_autogen/include/GUI/ui_mainpage.h",
 			"sourceGroupIndex" : 1
 		},
 		{
