@@ -3,6 +3,9 @@
 #include <QLCDNumber>
 #include "Non QT classes//Clock.h"
 #include "Non QT classes//Timer.h"
+#include "GUI//mainpage.h"
+#include "GUI//ui_mainpage.h"
+
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
@@ -24,8 +27,7 @@ int main(int argc, char *argv[]) {
 
     //main
 
-    //QPushButton button("Hello world!", nullptr);
-    //button.resize(200, 100);
-   // button.show();
+    mainpage w;
+    w.show();
     return QApplication::exec();
 }

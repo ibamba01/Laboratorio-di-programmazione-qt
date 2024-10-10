@@ -1,9 +1,9 @@
 # ninja log v6
-22	154	7502564452325138	Laboratorio_autogen/timestamp	73f62a0f17bf38dc
 998	6328	7502563718795214	CMakeFiles/Laboratorio.dir/GUI/mainpage.cpp.obj	1275d8b5869ef43d
 153	3091	7502029917868065	CMakeFiles/Laboratorio.dir/qtclock.cpp.obj	57b4964f7e112769
-22	154	7502564452325138	Laboratorio_autogen/mocs_compilation.cpp	73f62a0f17bf38dc
+22	154	7502564452325138	Laboratorio_autogen/timestamp	73f62a0f17bf38dc
 22	154	7502564452325138	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/timestamp	73f62a0f17bf38dc
+22	154	7502564452325138	Laboratorio_autogen/mocs_compilation.cpp	73f62a0f17bf38dc
 850	5036	7502044765689796	CMakeFiles/Laboratorio.dir/QT_classes_clock/digitalclock.cpp.obj	c900904d722bba67
 22	154	7502564452325138	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/mocs_compilation.cpp	73f62a0f17bf38dc
 155	3350	7502564453652781	CMakeFiles/Laboratorio.dir/main.cpp.obj	e8f02f8ed56150d4
@@ -18,3 +18,20 @@
 989	4091	7502563718707099	CMakeFiles/Laboratorio.dir/Non_QT_classes/Timer.cpp.obj	8bdde7c28e9a3747
 813	4044	7502046320765459	CMakeFiles/Laboratorio.dir/QT_classes_timer/digitaltimer.cpp.obj	27062a383095a0ed
 1003	6139	7502563718836201	CMakeFiles/Laboratorio.dir/QT_classes/QtTimer.cpp.obj	ec940f448c0799da
+27	1344	7502725807220285	build.ninja	2badfc5390895cee
+160	1042	7502725812255117	Laboratorio_autogen/timestamp	73f62a0f17bf38dc
+160	1042	7502725812255117	Laboratorio_autogen/mocs_compilation.cpp	73f62a0f17bf38dc
+160	1042	7502725812255117	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/timestamp	73f62a0f17bf38dc
+160	1042	7502725812255117	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/mocs_compilation.cpp	73f62a0f17bf38dc
+1051	6555	7502725821158841	CMakeFiles/Laboratorio.dir/QT_classes/QtTimer.cpp.obj	ec940f448c0799da
+1072	6610	7502725821370993	CMakeFiles/Laboratorio.dir/QT_classes/QtChronometer.cpp.obj	bf3cbe5075142abb
+1061	7429	7502725821251153	CMakeFiles/Laboratorio.dir/QT_classes/QtClock.cpp.obj	7ba70c20d6b540ec
+1044	7451	7502725821085205	CMakeFiles/Laboratorio.dir/main.cpp.obj	e8f02f8ed56150d4
+7451	8408	7502725885158770	Laboratorio.exe	b15c1d7f30cf8e3d
+36	402	7502727445693343	Laboratorio_autogen/timestamp	73f62a0f17bf38dc
+36	402	7502727445693343	Laboratorio_autogen/mocs_compilation.cpp	73f62a0f17bf38dc
+36	402	7502727445693343	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/timestamp	73f62a0f17bf38dc
+36	402	7502727445693343	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/mocs_compilation.cpp	73f62a0f17bf38dc
+404	6573	7502727449367489	CMakeFiles/Laboratorio.dir/main.cpp.obj	e8f02f8ed56150d4
+412	6650	7502727449452095	CMakeFiles/Laboratorio.dir/GUI/mainpage.cpp.obj	1275d8b5869ef43d
+6650	7694	7502727511826114	Laboratorio.exe	b15c1d7f30cf8e3d

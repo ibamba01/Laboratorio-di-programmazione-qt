@@ -602,8 +602,10 @@ Laboratorio_autogen/timestamp: \
 	C:/Users/Pietro/CLionProjects/Laboratorio/Non\ QT\ classes/Clock.h \
 	C:/Users/Pietro/CLionProjects/Laboratorio/Non\ QT\ classes/Timer.cpp \
 	C:/Users/Pietro/CLionProjects/Laboratorio/Non\ QT\ classes/Timer.h \
-	C:/Users/Pietro/CLionProjects/Laboratorio/Non\ QT\ classes/cronometro.cpp \
-	C:/Users/Pietro/CLionProjects/Laboratorio/Non\ QT\ classes/cronometro.h \
+	C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtChronometer.cpp \
+	C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtChronometer.h \
+	C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtClock.cpp \
+	C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtClock.h \
 	C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtTimer.cpp \
 	C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtTimer.h \
 	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/CMakeFiles/3.29.6/CMakeCCompiler.cmake \
