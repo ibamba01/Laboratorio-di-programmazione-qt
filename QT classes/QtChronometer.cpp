@@ -3,8 +3,7 @@
 //
 
 #include "QtChronometer.h"
-QtChronometer::QtChronometer() {
-active = false;
+QtChronometer::QtChronometer() : elapsedTimer(new QElapsedTimer), active(false) {
 }
 QtChronometer::~QtChronometer() {
     delete elapsedTimer;
@@ -48,6 +47,6 @@ QTime QtChronometer::getTime() const {
 
 QString QtChronometer::getTimeString() const {
     if (active) {
-        return QTime(0, 0).addMSecs(elapsedTimer->elapsed()).toString("hh:mm:ss:zzz");
+        return QTime(0, 0).addMSecs(elapsedTimer->elapsed()).toString("hh:mm:ss");
     }
 }

@@ -42,7 +42,7 @@ QString QtClock::showDate() const {
             uscita="dd/MM/yyyy";
             break;
         case DateFormat::GDM:
-            uscita="ggggggggg dd mm";
+            uscita="ggg dd mm";
             break;
     }
     return Date->toString(uscita);

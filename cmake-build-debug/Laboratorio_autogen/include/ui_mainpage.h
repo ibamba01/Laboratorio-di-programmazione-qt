@@ -221,7 +221,7 @@ public:
         RadioData1->setText(QCoreApplication::translate("mainpage", "GDM", nullptr));
         RadioData2->setText(QCoreApplication::translate("mainpage", "DMY", nullptr));
         DataVisLabel->setText(QCoreApplication::translate("mainpage", "Visualizzazione Data", nullptr));
-        DisplayCronometro->setText(QCoreApplication::translate("mainpage", "00:00:00:000", nullptr));
+        DisplayCronometro->setText(QCoreApplication::translate("mainpage", "00:00:00", nullptr));
         CronometroLable->setText(QCoreApplication::translate("mainpage", "Cronometro", nullptr));
         RadioOra1->setText(QCoreApplication::translate("mainpage", "HMS", nullptr));
         RadioOra3->setText(QCoreApplication::translate("mainpage", "HMSA", nullptr));

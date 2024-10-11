@@ -9,12 +9,13 @@
 
 //---------costruttore e distruttore----------------
 mainpage::mainpage(QWidget *parent) :
-        QWidget(parent), ui(new Ui::mainpage), clockKeeper(new QtClock), timerKeeper(new QtTimer) {
+        QWidget(parent), ui(new Ui::mainpage), clockKeeper(new QtClock), timerKeeper(new QtTimer), chronometerKeeper(new QtChronometer) {
 
     ui->setupUi(this);
     updater = new QTimer(this);
     QObject::connect(updater,SIGNAL(timeout()),this,SLOT(Update()));
     updater->start(1000); //aggiorna ogni secondo
+
 }
 
 mainpage::~mainpage() {
@@ -156,7 +157,7 @@ void mainpage::Update(){
     //classe QtChronometer
     if (chronometerKeeper->isRunning())
         ui->DisplayCronometro->setText(chronometerKeeper->getTimeString());
-   // DisplayCronometro è il nome del label inizializzata a 00:00:00:000 che viene usata vedere il tempo trascorso del cronometro
+   // DisplayCronometro è il nome del label inizializzata a 00:00:00 che viene usata vedere il tempo trascorso del cronometro
 }
 
 //--------------Strat e Stop----------------
@@ -171,6 +172,7 @@ void mainpage::on_AvviaStopButtonTimer_clicked(){
 }
 void mainpage::on_AvviaResetButtonCronometro_clicked() {
    if(! chronometerKeeper->isRunning())
+
         chronometerKeeper->startChronometer();
    else
        chronometerKeeper->restartChronometer();
