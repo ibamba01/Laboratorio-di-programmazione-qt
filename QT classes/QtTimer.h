@@ -27,8 +27,10 @@ public:
     bool isRunning() const;
 
 
-    QTimer * timer; //deve essere un puntatore per accedere alla funzione timeout di Singal per aggiornare in autimatico il tempo
+    QTimer timer; //deve essere un puntatore per accedere alla funzione timeout di Singal per aggiornare in autimatico il tempo
+    // risolto passando il riferimento a timer
     // bool active; QTimer ha già un metodo per vedere se è attivo o no
+
 };
 
 

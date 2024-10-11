@@ -28,8 +28,8 @@ public:
 
 
 private:
-    QTime * Time;
-    QDate * Date;
+    QTime  Time;
+    QDate  Date;
     TimeFormat viewModeTime;
     DateFormat viewModeDate;
 };

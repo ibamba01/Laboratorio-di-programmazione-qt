@@ -9,9 +9,11 @@
 
 //---------costruttore e distruttore----------------
 mainpage::mainpage(QWidget *parent) :
-        QWidget(parent), ui(new Ui::mainpage) //, clockKeeper(new QtClock), timerKeeper(new QtTimer), chronometerKeeper(new QtChronometer) {
-{
+        QWidget(parent), ui(new Ui::mainpage) {
+        //, clockKeeper(new QtClock), timerKeeper(new QtTimer), chronometerKeeper(new QtChronometer)
+
     ui->setupUi(this);
+
     updater = new QTimer(this);
     QObject::connect(updater,SIGNAL(timeout()),this,SLOT(Update()));
     updater->start(1000); //aggiorna ogni secondo
@@ -164,7 +166,7 @@ void mainpage::Update(){
 void mainpage::on_AvviaStopButtonTimer_clicked(){
     if(! timerKeeper.isRunning()){
         timerKeeper.startTimer();
-        QObject::connect(timerKeeper.timer,SIGNAL(timeout()),this,SLOT(timeIsUpWarning()));
+        QObject::connect(&(timerKeeper.timer),SIGNAL(timeout()),this,SLOT(timeIsUpWarning()));
         // connect ha bisogno di un puntatore di un puntatore come argometo
     }
     else
