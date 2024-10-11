@@ -167,7 +167,7 @@ CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 CMAKE_LINKER:FILEPATH=C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/ld.exe
 
 //make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/ninja/win/x64/ninja.exe
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/Program Files/JetBrains/CLion 2022.3.2/bin/ninja/win/x64/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -199,7 +199,7 @@ CMAKE_OBJCOPY:FILEPATH=C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/o
 CMAKE_OBJDUMP:FILEPATH=C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/bin/objdump.exe
 
 //No help, variable specified on the command line.
-CMAKE_PREFIX_PARH:UNINITIALIZED=C:\Qt\6.8.0\mingw_64\lib\cmake
+CMAKE_PREFIX_PATH:UNINITIALIZED=C:\Qt\6.8.0\mingw_64
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=

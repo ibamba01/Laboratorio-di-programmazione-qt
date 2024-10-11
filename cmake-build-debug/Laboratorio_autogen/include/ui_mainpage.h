@@ -49,6 +49,7 @@ public:
     QRadioButton *RadioData;
     QLabel *label_2;
     QLabel *label_3;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *mainpage)
     {
@@ -149,6 +150,9 @@ public:
         label_3 = new QLabel(mainpage);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(290, 110, 111, 16));
+        pushButton = new QPushButton(mainpage);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(320, 240, 75, 24));
 
         retranslateUi(mainpage);
         QObject::connect(TensecButtomTimer, SIGNAL(clicked()), mainpage, SLOT(doit_when_10secbtn_ispressed()));
@@ -156,6 +160,7 @@ public:
         QObject::connect(ThyMinButtonTimer, SIGNAL(clicked()), mainpage, SLOT(doit_when_30minsecbtn_ispressed()));
         QObject::connect(OneMinButtonTimer, SIGNAL(clicked()), mainpage, SLOT(doit_when_1minbtn_ispressed()));
         QObject::connect(TwoHButtonTimer, SIGNAL(clicked()), mainpage, SLOT(doit_when_2orebtn_ispressed()));
+        QObject::connect(pushButton, &QPushButton::clicked, AvviaResetButtonCronometro, qOverload<>(&QPushButton::click));
 
         QMetaObject::connectSlotsByName(mainpage);
     } // setupUi
@@ -187,6 +192,7 @@ public:
         RadioData->setText(QCoreApplication::translate("mainpage", "GDM", nullptr));
         label_2->setText(QCoreApplication::translate("mainpage", "Visualizzazione Ora", nullptr));
         label_3->setText(QCoreApplication::translate("mainpage", "Visualizzazione Data", nullptr));
+        pushButton->setText(QCoreApplication::translate("mainpage", "PushButton", nullptr));
     } // retranslateUi
 
 };

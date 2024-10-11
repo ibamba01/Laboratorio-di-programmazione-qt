@@ -6,94 +6,302 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>805</width>
-    <height>800</height>
+    <width>404</width>
+    <height>281</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>mainpage</string>
   </property>
-  <widget class="QWidget" name="gridLayoutWidget">
+  <widget class="QPushButton" name="AvviaResetButtonCronometro">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>90</y>
-     <width>381</width>
-     <height>351</height>
+     <x>182</x>
+     <y>70</y>
+     <width>161</width>
+     <height>24</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout_2">
+   <property name="text">
+    <string>Avvia/Reset</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>162</x>
+     <y>200</y>
+     <width>160</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="QLabel" name="OraLabel">
+      <property name="text">
+       <string>Ora</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="DisplayOra">
+      <property name="text">
+       <string>00:00:0000</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="TimerLabel">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>0</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Timer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="AvviaStopButtonTimer">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>150</y>
+     <width>161</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Avvia/Stop</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DisplayTimer">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>30</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00:00:00</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>200</y>
+     <width>160</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QLabel" name="DataLabel">
+      <property name="text">
+       <string>data</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="DisplayData">
+      <property name="text">
+       <string>00:00:0000</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="OrologioLable">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>180</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Orologio</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>292</x>
+     <y>120</y>
+     <width>56</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QRadioButton" name="RadioData1">
+      <property name="text">
+       <string>GDM</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="RadioData2">
+      <property name="text">
+       <string>DMY</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="DataVisLabel">
+   <property name="geometry">
+    <rect>
+     <x>282</x>
+     <y>100</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Visualizzazione Data</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="DisplayCronometro">
+   <property name="geometry">
+    <rect>
+     <x>182</x>
+     <y>30</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00:00:00</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CronometroLable">
+   <property name="geometry">
+    <rect>
+     <x>192</x>
+     <y>20</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cronometro</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>120</y>
+     <width>62</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QRadioButton" name="RadioOra1">
+      <property name="text">
+       <string>HMS</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="RadioOra3">
+      <property name="text">
+       <string>HMSA</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="RadioOra2">
+      <property name="text">
+       <string>HM</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="OraVisLabel">
+   <property name="geometry">
+    <rect>
+     <x>172</x>
+     <y>100</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Visualizzazione Ora</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>60</y>
+     <width>160</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
     <item row="0" column="0">
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="1" column="2">
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" colspan="3">
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QLabel" name="label">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>1999</width>
-            <height>16</height>
-           </size>
-          </property>
-          <property name="mouseTracking">
-           <bool>false</bool>
-          </property>
-          <property name="layoutDirection">
-           <enum>Qt::LayoutDirection::LeftToRight</enum>
-          </property>
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignmentFlag::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLCDNumber" name="lcdNumber">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
+     <widget class="QPushButton" name="Timer1Button">
+      <property name="text">
+       <string>10 sec</string>
+      </property>
+     </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="Timer2Button">
       <property name="text">
-       <string>PushButton</string>
+       <string>30 sec</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="Timer3Button">
+      <property name="text">
+       <string>1 min</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="Timer4Button">
+      <property name="text">
+       <string>30 min</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="TimerButton">
+      <property name="text">
+       <string>2 ore</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="TimerCustomButtom">
+      <property name="text">
+       <string>custom</string>
       </property>
      </widget>
     </item>
@@ -102,4 +310,11 @@
  </widget>
  <resources/>
  <connections/>
+ <slots>
+  <slot>doit_when_10secbtn_ispressed()</slot>
+  <slot>doit_when_60secbtn_ispressed()</slot>
+  <slot>doit_when_1minbtn_ispressed()</slot>
+  <slot>doit_when_30minsecbtn_ispressed()</slot>
+  <slot>doit_when_2orebtn_ispressed()</slot>
+ </slots>
 </ui>

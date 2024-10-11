@@ -7,9 +7,9 @@
 QtClock::QtClock() :  viewModeTime(TimeFormat::HMS), viewModeDate(DateFormat::DMY) {
 }
 
-QtClock::~QtClock() {
+//QtClock::~QtClock()  {
     //delete Time, Date;
-}
+//}
 void QtClock::setTime(int h, int m, int s) {
     Time.setHMS(h, m, s);
 }
@@ -20,7 +20,7 @@ void QtClock::setDate(int y, int m, int d) {
 QString QtClock::showTime() const {
      QString uscita;
     switch (viewModeTime) {
-        case TimeFormat::HMS:
+        default: //TimeFormat::HMS;
             uscita="hh:mm:ss";
             break;
         case TimeFormat::HM:
@@ -36,7 +36,7 @@ QString QtClock::showTime() const {
 QString QtClock::showDate() const {
     QString uscita;
     switch (viewModeDate) {
-        case DateFormat::DMY:
+        default:// DateFormat::DMY;
             uscita="dd/MM/yyyy";
             break;
         case DateFormat::GDM:

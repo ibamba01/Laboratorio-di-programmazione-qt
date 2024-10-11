@@ -6,7 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(CMAKE_PREFIX_PATH "C:/Qt/6.8.0/mingw_64/lib/cmake")
+set(CMAKE_PREFIX_PATH "C:/Qt/6.8.0/mingw_64")
 
 find_package(Qt6 COMPONENTS
         Core
@@ -16,25 +16,31 @@ find_package(Qt6 COMPONENTS
 
 add_executable(Laboratorio
         main.cpp
+        mainpage.cpp
+        mainpage.h
+        mainpage.ui
         "Non QT classes/Timer.cpp"
         "Non QT classes/Timer.h"
         "Non QT classes/Clock.cpp"
         "Non QT classes/Clock.h"
-        GUI/mainpage.cpp
-        GUI/mainpage.h
-        GUI/mainpage.ui
         "QT classes/QtTimer.cpp"
         "QT classes/QtTimer.h"
         "QT classes/QtClock.cpp"
         "QT classes/QtClock.h"
         "QT classes/QtChronometer.cpp"
         "QT classes/QtChronometer.h"
+        GUI/qclock.cpp
+        GUI/qclock.h
+        GUI/qclock.ui
 )
 target_link_libraries(Laboratorio
         Qt::Core
         Qt::Gui
         Qt::Widgets
 )
+set(SOURCE_FILES mainpage.cpp
+mainpage.h
+mainpage.ui)
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     set(DEBUG_SUFFIX)

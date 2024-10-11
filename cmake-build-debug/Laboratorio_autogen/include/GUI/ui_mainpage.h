@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -49,6 +50,7 @@ public:
     QRadioButton *RadioData;
     QLabel *label_2;
     QLabel *label_3;
+    QCheckBox *checkBox;
 
     void setupUi(QWidget *mainpage)
     {
@@ -149,6 +151,9 @@ public:
         label_3 = new QLabel(mainpage);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(290, 110, 111, 16));
+        checkBox = new QCheckBox(mainpage);
+        checkBox->setObjectName("checkBox");
+        checkBox->setGeometry(QRect(330, 250, 78, 20));
 
         retranslateUi(mainpage);
         QObject::connect(TensecButtomTimer, SIGNAL(clicked()), mainpage, SLOT(doit_when_10secbtn_ispressed()));
@@ -187,6 +192,7 @@ public:
         RadioData->setText(QCoreApplication::translate("mainpage", "GDM", nullptr));
         label_2->setText(QCoreApplication::translate("mainpage", "Visualizzazione Ora", nullptr));
         label_3->setText(QCoreApplication::translate("mainpage", "Visualizzazione Data", nullptr));
+        checkBox->setText(QCoreApplication::translate("mainpage", "CheckBox", nullptr));
     } // retranslateUi
 
 };
