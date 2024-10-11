@@ -46,8 +46,8 @@ QTime QtChronometer::getTime() const {
     return QTime(0,0);  // Se il timer non è in esecuzione, restituisce 00:00:00
 }
 
-//QString QtChronometer::getTimeString() const {
- //   if (active) {
- //     return  QTime(0,0).addMSecs(elapsedTimer->elapsed()).toString("hh:mm:ss:zzz");
- //   }
-//}
+QString QtChronometer::getTimeString() const {
+    if (active) {
+        return QTime(0, 0).addMSecs(elapsedTimer->elapsed()).toString("hh:mm:ss:zzz");
+    }
+}

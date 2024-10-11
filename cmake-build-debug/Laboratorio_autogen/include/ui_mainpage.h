@@ -89,7 +89,7 @@ public:
         TimerLabel->setGeometry(QRect(2, 0, 91, 31));
         AvviaStopButtonTimer = new QPushButton(mainpage);
         AvviaStopButtonTimer->setObjectName("AvviaStopButtonTimer");
-        AvviaStopButtonTimer->setGeometry(QRect(2, 150, 161, 24));
+        AvviaStopButtonTimer->setGeometry(QRect(2, 150, 171, 24));
         DisplayTimer = new QLabel(mainpage);
         DisplayTimer->setObjectName("DisplayTimer");
         DisplayTimer->setGeometry(QRect(0, 30, 161, 31));
@@ -139,7 +139,7 @@ public:
         DisplayCronometro->setAlignment(Qt::AlignmentFlag::AlignCenter);
         CronometroLable = new QLabel(mainpage);
         CronometroLable->setObjectName("CronometroLable");
-        CronometroLable->setGeometry(QRect(192, 20, 81, 16));
+        CronometroLable->setGeometry(QRect(300, 10, 81, 16));
         verticalLayoutWidget = new QWidget(mainpage);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
         verticalLayoutWidget->setGeometry(QRect(180, 120, 62, 80));
@@ -166,7 +166,7 @@ public:
         OraVisLabel->setGeometry(QRect(172, 100, 101, 16));
         formLayoutWidget = new QWidget(mainpage);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(2, 60, 160, 91));
+        formLayoutWidget->setGeometry(QRect(2, 60, 161, 91));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -232,7 +232,7 @@ public:
         Timer3Button->setText(QCoreApplication::translate("mainpage", "1 min", nullptr));
         Timer4Button->setText(QCoreApplication::translate("mainpage", "30 min", nullptr));
         Timer5Button->setText(QCoreApplication::translate("mainpage", "2 ore", nullptr));
-        TimerCustomButtom->setText(QCoreApplication::translate("mainpage", "custom", nullptr));
+        TimerCustomButtom->setText(QCoreApplication::translate("mainpage", " hh:mm:ss", nullptr));
     } // retranslateUi
 
 };

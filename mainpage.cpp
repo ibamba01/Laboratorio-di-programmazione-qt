@@ -21,7 +21,7 @@ mainpage::~mainpage() {
     delete ui;
     delete updater;
     delete timerKeeper;
-//    delete chronometerKeeper;
+    delete chronometerKeeper;
 }
 
 //------------metodi current----------------
@@ -48,6 +48,10 @@ void mainpage::on_Timer1Button_clicked() {
     ui->DisplayTimer->clear();
 
     valoretimer = "00:00:10";
+
+    if (timerKeeper->isRunning())
+        timerKeeper->stopTimer();
+
     QTime timeInput = QTime::fromString(valoretimer);
     timerKeeper->setTimer(timeInput);
     ui->DisplayTimer->setText(timeInput.toString());
@@ -57,6 +61,10 @@ void mainpage::on_Timer2Button_clicked() {
     ui->DisplayTimer->clear();
 
     valoretimer = "00:00:30";
+
+    if (timerKeeper->isRunning())
+        timerKeeper->stopTimer();
+
     QTime timeInput = QTime::fromString(valoretimer);
     timerKeeper->setTimer(timeInput);
     ui->DisplayTimer->setText(timeInput.toString());
@@ -66,6 +74,10 @@ void mainpage::on_Timer3Button_clicked() {
     ui->DisplayTimer->clear();
 
     valoretimer = "00:01:00";
+
+    if (timerKeeper->isRunning())
+        timerKeeper->stopTimer();
+
     QTime timeInput = QTime::fromString(valoretimer);
     timerKeeper->setTimer(timeInput);
     ui->DisplayTimer->setText(timeInput.toString());
@@ -75,6 +87,10 @@ void mainpage::on_Timer4Button_clicked() {
     ui->DisplayTimer->clear();
 
     valoretimer = "00:05:00";
+
+    if (timerKeeper->isRunning())
+        timerKeeper->stopTimer();
+
     QTime timeInput = QTime::fromString(valoretimer);
     timerKeeper->setTimer(timeInput);
     ui->DisplayTimer->setText(timeInput.toString());
@@ -84,6 +100,10 @@ void mainpage::on_Timer5Button_clicked() {
     ui->DisplayTimer->clear();
 
     valoretimer = "02:00:00";
+
+    if (timerKeeper->isRunning())
+        timerKeeper->stopTimer();
+
     QTime timeInput = QTime::fromString(valoretimer);
     timerKeeper->setTimer(timeInput);
     ui->DisplayTimer->setText(timeInput.toString());
@@ -91,6 +111,9 @@ void mainpage::on_Timer5Button_clicked() {
 
 void mainpage::on_TimerCustomButtom_editingFinished() {
     ui->DisplayTimer->clear();
+
+    if (timerKeeper->isRunning())
+        timerKeeper->stopTimer();
 
     QString input = ui->TimerCustomButtom->text();
     QTime timeInput = QTime::fromString(input);
@@ -100,7 +123,7 @@ void mainpage::on_TimerCustomButtom_editingFinished() {
         ui->DisplayTimer->setText(timeInput.toString());
     }
     else {
-        ui->DisplayTimer->setText("Invalid time");
+        ui->DisplayTimer->setText("Formato non valido");
     }
     ui->TimerCustomButtom->clear();
 }
@@ -108,7 +131,7 @@ void mainpage::on_TimerCustomButtom_editingFinished() {
 //------------timer metodi----------------
 void mainpage::timeIsUpWarning() {
     timerKeeper->stopTimer();
-    ui->DisplayTimer->setText("Time's up!");
+    ui->DisplayTimer->setText("Finito!");
 }
 //------------update----------------
 void mainpage::Update(){
@@ -131,9 +154,9 @@ void mainpage::Update(){
     //DisplayTimer è il nome del label inizializzata a 00:00:000 che viene usata vedere il tempo rimanente del timer
 
     //classe QtChronometer
-  //  if (chronometerKeeper->isRunning())
-     //   ui->DisplayCronometro->setText(chronometerKeeper->getTimeString());
-    //DisplayCronometro è il nome del label inizializzata a 00:00:00:000 che viene usata vedere il tempo trascorso del cronometro
+    if (chronometerKeeper->isRunning())
+        ui->DisplayCronometro->setText(chronometerKeeper->getTimeString());
+   // DisplayCronometro è il nome del label inizializzata a 00:00:00:000 che viene usata vedere il tempo trascorso del cronometro
 }
 
 //--------------Strat e Stop----------------
@@ -146,12 +169,12 @@ void mainpage::on_AvviaStopButtonTimer_clicked(){
     else
         timerKeeper->pause();
 }
-//void mainpage::on_AvviaResetButtonCronometro_clicked() {
-   // if(! chronometerKeeper->isRunning())
-    //    chronometerKeeper->startChronometer();
-  //  else
-  //      chronometerKeeper->restartChronometer();
-//}
+void mainpage::on_AvviaResetButtonCronometro_clicked() {
+   if(! chronometerKeeper->isRunning())
+        chronometerKeeper->startChronometer();
+   else
+       chronometerKeeper->restartChronometer();
+}
 
 
 

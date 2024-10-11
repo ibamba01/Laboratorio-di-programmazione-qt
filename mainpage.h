@@ -11,7 +11,7 @@
 #include <memory>
 #include "QT classes/QtClock.h"
 #include "QT classes/QtTimer.h"
-//#include "QT classes/QtChronometer.h"
+#include "QT classes/QtChronometer.h"
 
 
 
@@ -59,8 +59,9 @@ private:
     Ui::mainpage * ui;
     QTimer * updater;
     QtTimer * timerKeeper;
+    QtChronometer * chronometerKeeper;
     unique_ptr<QtClock> clockKeeper;
- //   QtChronometer * chronometerKeeper;
+
 
 };
 

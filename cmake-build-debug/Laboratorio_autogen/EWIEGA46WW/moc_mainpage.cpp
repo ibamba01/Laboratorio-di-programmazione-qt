@@ -171,7 +171,7 @@ void mainpage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 11: _t->on_RadioData1_clicked(); break;
         case 12: _t->on_RadioData2_clicked(); break;
         case 13: _t->on_AvviaStopButtonTimer_clicked(); break;
-//        case 14: _t->on_AvviaResetButtonCronometro_clicked(); break;
+        case 14: _t->on_AvviaResetButtonCronometro_clicked(); break;
         default: ;
         }
     }
