@@ -58,9 +58,9 @@ private slots:
 private:
     Ui::mainpage * ui;
     QTimer * updater;
-    QtTimer * timerKeeper;
-    QtChronometer * chronometerKeeper;
-    unique_ptr<QtClock> clockKeeper;
+    QtTimer  timerKeeper;
+    QtChronometer  chronometerKeeper;
+    QtClock clockKeeper;
 
 
 };
