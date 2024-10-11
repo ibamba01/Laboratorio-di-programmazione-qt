@@ -6,12 +6,12 @@
 #include "QtTimer.h"
 
 
-QtTimer::QtTimer() {
+QtTimer::QtTimer() : timer(new QTimer) {
 }
 
-//QtTimer::~QtTimer() {
-  //  delete timer;
-//}
+QtTimer::~QtTimer() {
+  delete timer;
+}
 
 bool QtTimer::isRunning() const {
     return timer->isActive();

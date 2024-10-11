@@ -4,17 +4,19 @@
 
 #include "QtClock.h"
 
-QtClock::QtClock() :  viewModeTime(TimeFormat::HMS), viewModeDate(DateFormat::DMY) {
+QtClock::QtClock() : Time(new QTime), Date(new QDate),  viewModeTime(TimeFormat::HMS), viewModeDate(DateFormat::DMY) {
 }
 
-//QtClock::~QtClock()  {
-    //delete Time, Date;
-//}
+QtClock::~QtClock(){
+    delete Time;
+    delete Date;
+}
+
 void QtClock::setTime(int h, int m, int s) {
-    Time.setHMS(h, m, s);
+    Time->setHMS(h, m, s);
 }
 void QtClock::setDate(int y, int m, int d) {
-    Date.setDate(y, m, d);
+    Date->setDate(y, m, d);
 }
 
 QString QtClock::showTime() const {
@@ -30,7 +32,7 @@ QString QtClock::showTime() const {
             uscita= "hh:mm:ss a";
             break;
     }
-    return Time.toString(uscita);
+    return Time->toString(uscita);
 }
 
 QString QtClock::showDate() const {
@@ -43,7 +45,7 @@ QString QtClock::showDate() const {
             uscita="ggggggggg dd mm";
             break;
     }
-    return Date.toString(uscita);
+    return Date->toString(uscita);
 }
 
 void QtClock::setViewModeTime(TimeFormat timeFormat) {

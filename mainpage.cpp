@@ -9,7 +9,8 @@
 
 //---------costruttore e distruttore----------------
 mainpage::mainpage(QWidget *parent) :
-        QWidget(parent), ui(new Ui::mainpage) {
+        QWidget(parent), ui(new Ui::mainpage), clockKeeper(new QtClock), timerKeeper(new QtTimer) {
+
     ui->setupUi(this);
     updater = new QTimer(this);
     QObject::connect(updater,SIGNAL(timeout()),this,SLOT(Update()));
@@ -20,6 +21,7 @@ mainpage::~mainpage() {
     delete ui;
     delete updater;
     delete timerKeeper;
+//    delete chronometerKeeper;
 }
 
 //------------metodi current----------------
@@ -129,8 +131,8 @@ void mainpage::Update(){
     //DisplayTimer è il nome del label inizializzata a 00:00:000 che viene usata vedere il tempo rimanente del timer
 
     //classe QtChronometer
-    if (chronometerKeeper->isRunning())
-        ui->DisplayCronometro->setText(chronometerKeeper->getTimeString());
+  //  if (chronometerKeeper->isRunning())
+     //   ui->DisplayCronometro->setText(chronometerKeeper->getTimeString());
     //DisplayCronometro è il nome del label inizializzata a 00:00:00:000 che viene usata vedere il tempo trascorso del cronometro
 }
 
@@ -144,12 +146,12 @@ void mainpage::on_AvviaStopButtonTimer_clicked(){
     else
         timerKeeper->pause();
 }
-void mainpage::on_AvviaResetButtonCronometro_clicked() {
-    if(! chronometerKeeper->isRunning())
-        chronometerKeeper->startChronometer();
-    else
-        chronometerKeeper->restartChronometer();
-}
+//void mainpage::on_AvviaResetButtonCronometro_clicked() {
+   // if(! chronometerKeeper->isRunning())
+    //    chronometerKeeper->startChronometer();
+  //  else
+  //      chronometerKeeper->restartChronometer();
+//}
 
 
 

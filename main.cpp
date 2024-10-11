@@ -2,7 +2,6 @@
 #include "Non QT classes/Clock.h"
 #include "Non QT classes/Timer.h"
 #include "mainpage.h"
-#include "GUI/qclock.h"
 
 
 int main(int argc, char *argv[]) {

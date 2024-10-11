@@ -248,7 +248,6 @@ C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/
   C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QDate \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QDateTime \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/QElapsedTimer \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QTime \
   C:/Qt/6.8.0/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.8.0/mingw_64/include/QtCore/q20functional.h \
@@ -287,7 +286,6 @@ C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/
   C:/Qt/6.8.0/mingw_64/include/QtCore/qdatastream.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qdebug.h \
-  C:/Qt/6.8.0/mingw_64/include/QtCore/qelapsedtimer.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qendian.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.8.0/mingw_64/include/QtCore/qflags.h \
@@ -411,7 +409,6 @@ C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.8.0/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtChronometer.h \
   C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtClock.h \
   C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtTimer.h \
   C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.h

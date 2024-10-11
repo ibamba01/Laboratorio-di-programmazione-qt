@@ -13,7 +13,7 @@
 class QtTimer {
 public:
     QtTimer();
-    ~QtTimer() = default;
+    ~QtTimer();
 
     //controllano che time non sia attivo
     bool startTimer();
