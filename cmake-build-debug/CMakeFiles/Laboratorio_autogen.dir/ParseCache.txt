@@ -2,6 +2,7 @@
 C:/Users/Pietro/CLionProjects/Laboratorio/Clock.h
 C:/Users/Pietro/CLionProjects/Laboratorio/QtTimer.h
 C:/Users/Pietro/CLionProjects/Laboratorio/QtChronometer.h
+C:/Users/Pietro/CLionProjects/Laboratorio/Timer.h
 C:/Users/Pietro/CLionProjects/Laboratorio/GUI/qclock.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -404,7 +405,6 @@ C:/Users/Pietro/CLionProjects/Laboratorio/GUI/qclock.h
  mdp:C:/Users/Pietro/CLionProjects/Laboratorio/GUI/qclock.h
  mdp:C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/moc_predefs.h
 C:/Users/Pietro/CLionProjects/Laboratorio/QtClock.h
-C:/Users/Pietro/CLionProjects/Laboratorio/Timer.h
 C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.h
  mmc:Q_OBJECT
  mdp:C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm
@@ -823,15 +823,15 @@ C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.h
  mdp:C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtTimer.h
  mdp:C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/moc_predefs.h
  mdp:C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.h
-C:/Users/Pietro/CLionProjects/Laboratorio/QtTimer.cpp
 C:/Users/Pietro/CLionProjects/Laboratorio/Clock.cpp
+C:/Users/Pietro/CLionProjects/Laboratorio/QtTimer.cpp
 C:/Users/Pietro/CLionProjects/Laboratorio/QtChronometer.cpp
+C:/Users/Pietro/CLionProjects/Laboratorio/QtClock.cpp
 C:/Users/Pietro/CLionProjects/Laboratorio/GUI/qclock.cpp
  uic:ui_Qclock.h
-C:/Users/Pietro/CLionProjects/Laboratorio/QtClock.cpp
 C:/Users/Pietro/CLionProjects/Laboratorio/Timer.cpp
-C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtTimer.h
 C:/Users/Pietro/CLionProjects/Laboratorio/main.cpp
+C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtTimer.h
 C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.cpp
  uic:ui_mainpage.h
 C:/Users/Pietro/CLionProjects/Laboratorio/Non QT classes/Clock.h

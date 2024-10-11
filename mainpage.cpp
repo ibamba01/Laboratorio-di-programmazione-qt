@@ -193,6 +193,10 @@ void mainpage::on_RadioData2_clicked() {
     clockKeeper.setViewModeDate(DateFormat::DMY);
     Update();
 }
+void mainpage::on_RadioData3_clicked() {
+    clockKeeper.setViewModeDate(DateFormat::GMA);
+    Update();
+}
 
 
 void mainpage::on_RadioOra1_clicked() {

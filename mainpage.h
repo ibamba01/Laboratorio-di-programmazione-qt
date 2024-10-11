@@ -49,6 +49,7 @@ private slots:
     void on_RadioOra3_clicked();
     void on_RadioData1_clicked();
     void on_RadioData2_clicked();
+    void on_RadioData3_clicked();
     void on_AvviaStopButtonTimer_clicked();
     void on_AvviaResetButtonCronometro_clicked();
 
@@ -61,8 +62,6 @@ private:
     QtTimer timerKeeper;
     QtChronometer chronometerKeeper;
     QtClock clockKeeper;
-
-
 };
 
 

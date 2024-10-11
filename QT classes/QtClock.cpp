@@ -19,7 +19,7 @@ void QtClock::setDate(int y, int m, int d) {
     Date.setDate(y, m, d);
 }
 
-QString QtClock::showTime() const {
+QString QtClock::showTime() const { // utilizzano i format di Qt
      QString uscita;
     switch (viewModeTime) {
         default: //TimeFormat::HMS;
@@ -39,10 +39,13 @@ QString QtClock::showDate() const {
     QString uscita;
     switch (viewModeDate) {
         default:// DateFormat::DMY;
-            uscita="dd/MM/yyyy";
+            uscita="dd/MM/yy";
             break;
         case DateFormat::GDM: //formato giorno numero mese
             uscita="dddd dd MMM";
+            break;
+        case DateFormat::GMA: //formato giorno mese anno
+            uscita="dddd MMMM yyyy";
             break;
     }
     return Date.toString(uscita);

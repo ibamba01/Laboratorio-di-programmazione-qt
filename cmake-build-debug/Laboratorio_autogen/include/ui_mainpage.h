@@ -41,6 +41,7 @@ public:
     QVBoxLayout *verticalLayout_2;
     QRadioButton *RadioData1;
     QRadioButton *RadioData2;
+    QRadioButton *RadioData3;
     QLabel *DataVisLabel;
     QLabel *DisplayCronometro;
     QLabel *CronometroLable;
@@ -116,7 +117,7 @@ public:
         OrologioLable->setGeometry(QRect(2, 180, 81, 16));
         verticalLayoutWidget_2 = new QWidget(mainpage);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
-        verticalLayoutWidget_2->setGeometry(QRect(292, 120, 56, 51));
+        verticalLayoutWidget_2->setGeometry(QRect(292, 120, 94, 74));
         verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -129,6 +130,11 @@ public:
         RadioData2->setObjectName("RadioData2");
 
         verticalLayout_2->addWidget(RadioData2);
+
+        RadioData3 = new QRadioButton(verticalLayoutWidget_2);
+        RadioData3->setObjectName("RadioData3");
+
+        verticalLayout_2->addWidget(RadioData3);
 
         DataVisLabel = new QLabel(mainpage);
         DataVisLabel->setObjectName("DataVisLabel");
@@ -220,6 +226,7 @@ public:
         OrologioLable->setText(QCoreApplication::translate("mainpage", "Orologio", nullptr));
         RadioData1->setText(QCoreApplication::translate("mainpage", "GDM", nullptr));
         RadioData2->setText(QCoreApplication::translate("mainpage", "DMY", nullptr));
+        RadioData3->setText(QCoreApplication::translate("mainpage", "GMA", nullptr));
         DataVisLabel->setText(QCoreApplication::translate("mainpage", "Visualizzazione Data", nullptr));
         DisplayCronometro->setText(QCoreApplication::translate("mainpage", "00:00:00", nullptr));
         CronometroLable->setText(QCoreApplication::translate("mainpage", "Cronometro", nullptr));

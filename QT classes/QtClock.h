@@ -11,7 +11,7 @@
 #include <QTimer>
 #include <QWidget>
 enum class TimeFormat {HMS, HM, HMSA};
-enum class DateFormat {DMY, GDM};
+enum class DateFormat {DMY, GDM, GMA};
 class QtClock {
 
 public:

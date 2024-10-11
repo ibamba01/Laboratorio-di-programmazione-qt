@@ -144,8 +144,8 @@
     <rect>
      <x>292</x>
      <y>120</y>
-     <width>56</width>
-     <height>51</height>
+     <width>94</width>
+     <height>74</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -160,6 +160,13 @@
      <widget class="QRadioButton" name="RadioData2">
       <property name="text">
        <string>DMY</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="RadioData3">
+      <property name="text">
+       <string>GMA</string>
       </property>
      </widget>
     </item>
