@@ -139,7 +139,7 @@ public:
         DisplayCronometro->setAlignment(Qt::AlignmentFlag::AlignCenter);
         CronometroLable = new QLabel(mainpage);
         CronometroLable->setObjectName("CronometroLable");
-        CronometroLable->setGeometry(QRect(300, 10, 81, 16));
+        CronometroLable->setGeometry(QRect(170, 10, 81, 16));
         verticalLayoutWidget = new QWidget(mainpage);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
         verticalLayoutWidget->setGeometry(QRect(180, 120, 62, 80));

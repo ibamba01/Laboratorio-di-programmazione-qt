@@ -4,7 +4,7 @@
 
 #include "QtClock.h"
 
-QtClock::QtClock() : Time(new QTime), Date(new QDate),  viewModeTime(TimeFormat::HMS), viewModeDate(DateFormat::DMY) {
+QtClock::QtClock() : Time(new QTime), Date(new QDate) {
 }
 
 QtClock::~QtClock(){
@@ -41,8 +41,8 @@ QString QtClock::showDate() const {
         default:// DateFormat::DMY;
             uscita="dd/MM/yyyy";
             break;
-        case DateFormat::GDM:
-            uscita="ggg dd mm";
+        case DateFormat::GDM: //formato giorno numero mese
+            uscita="dddd dd MMM";
             break;
     }
     return Date->toString(uscita);

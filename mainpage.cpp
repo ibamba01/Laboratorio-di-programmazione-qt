@@ -35,11 +35,11 @@ void mainpage::currentQTimeToTime(int &h, int &m, int &s) const {
     s=s%60;
     m=m%60;
 }
-void mainpage::currentQDateToDate(int &d, int &m, int &y) const {
+void mainpage::currentQDateToDate(int &year, int &month, int &day) const {
     QDate currentDate = QDate::currentDate();
-    d=currentDate.day();
-    m=currentDate.month();
-    y=currentDate.year();
+    day=currentDate.day();
+    month=currentDate.month();
+    year=currentDate.year();
 }
 
 //------------set timer----------------
@@ -182,13 +182,13 @@ void mainpage::on_AvviaResetButtonCronometro_clicked() {
 
 //--------set view mode-----------------
 void mainpage::on_RadioData1_clicked() {
-    clockKeeper->setViewModeDate(DateFormat::DMY);
+    clockKeeper->setViewModeDate(DateFormat::GDM);
     Update();
 }
 
 
 void mainpage::on_RadioData2_clicked() {
-    clockKeeper->setViewModeDate(DateFormat::GDM);
+    clockKeeper->setViewModeDate(DateFormat::DMY);
     Update();
 }
 
