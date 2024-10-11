@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -23,6 +24,8 @@ public:
     QPushButton *premuto1;
     QPushButton *premuto2;
     QPushButton *premuto3;
+    QPushButton *pushButton;
+    QCheckBox *checkBox;
 
     void setupUi(QWidget *Qclock)
     {
@@ -31,21 +34,29 @@ public:
         Qclock->resize(400, 300);
         PremituttiBtn = new QPushButton(Qclock);
         PremituttiBtn->setObjectName("PremituttiBtn");
-        PremituttiBtn->setGeometry(QRect(70, 110, 75, 24));
+        PremituttiBtn->setGeometry(QRect(0, 20, 75, 24));
         premuto1 = new QPushButton(Qclock);
         premuto1->setObjectName("premuto1");
-        premuto1->setGeometry(QRect(160, 180, 91, 31));
+        premuto1->setGeometry(QRect(300, 80, 91, 31));
         premuto2 = new QPushButton(Qclock);
         premuto2->setObjectName("premuto2");
-        premuto2->setGeometry(QRect(160, 50, 91, 31));
+        premuto2->setGeometry(QRect(300, 10, 91, 31));
         premuto3 = new QPushButton(Qclock);
         premuto3->setObjectName("premuto3");
-        premuto3->setGeometry(QRect(254, 100, 91, 41));
+        premuto3->setGeometry(QRect(300, 40, 91, 41));
+        pushButton = new QPushButton(Qclock);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(10, 90, 75, 24));
+        checkBox = new QCheckBox(Qclock);
+        checkBox->setObjectName("checkBox");
+        checkBox->setGeometry(QRect(10, 200, 78, 20));
 
         retranslateUi(Qclock);
         QObject::connect(PremituttiBtn, &QPushButton::clicked, premuto2, qOverload<>(&QPushButton::animateClick));
         QObject::connect(PremituttiBtn, &QPushButton::clicked, premuto1, qOverload<>(&QPushButton::animateClick));
         QObject::connect(PremituttiBtn, &QPushButton::clicked, premuto3, qOverload<>(&QPushButton::animateClick));
+        QObject::connect(premuto1, &QPushButton::clicked, pushButton, qOverload<>(&QPushButton::animateClick));
+        QObject::connect(pushButton, &QPushButton::clicked, checkBox, qOverload<>(&QCheckBox::toggle));
 
         QMetaObject::connectSlotsByName(Qclock);
     } // setupUi
@@ -57,6 +68,8 @@ public:
         premuto1->setText(QCoreApplication::translate("Qclock", "vengo premuto", nullptr));
         premuto2->setText(QCoreApplication::translate("Qclock", "vengo premuto", nullptr));
         premuto3->setText(QCoreApplication::translate("Qclock", "vengo premuto", nullptr));
+        pushButton->setText(QCoreApplication::translate("Qclock", "cateno", nullptr));
+        checkBox->setText(QCoreApplication::translate("Qclock", "CheckBox", nullptr));
     } // retranslateUi
 
 };

@@ -14,38 +14,38 @@ QtTimer::QtTimer() {
 //}
 
 bool QtTimer::isRunning() const {
-    return timer.isActive();
+    return timer->isActive();
 }
 
 bool QtTimer::startTimer() {
     if (isRunning())
         return false;
-    timer.start();
+    timer->start();
     return true;
 }
 
 bool QtTimer::stopTimer(){
     if (!isRunning())
         return false;
-    timer.stop();
+    timer->stop();
     return true;
 }
 
 bool QtTimer::setTimer(QTime time) { //imposta il timer
     if (isRunning())
         return false;
-    timer.setInterval(time.msec());
+    timer->setInterval((-1) * time.msecsTo(QTime(0, 0, 0, 0)));
     return true;
 }
 
 void QtTimer::pause() {
-    int remainingTime = timer.remainingTime(); //remainingTime ha bisogno che il timer sia attivo
-    timer.stop();
-    timer.setInterval(remainingTime);
+    int remainingTime = timer->remainingTime(); //remainingTime ha bisogno che il timer sia attivo
+    timer->stop();
+    timer->setInterval(remainingTime);
 }
 
 QString QtTimer::GetTimeString() const {
-    int totalSeconds = timer.remainingTime() / 1000;
+    int totalSeconds = timer->remainingTime() / 1000;
 
     int hours = totalSeconds / 3600;
     int minutes = (totalSeconds % 3600) / 60; // % restituisce il resto della divisione

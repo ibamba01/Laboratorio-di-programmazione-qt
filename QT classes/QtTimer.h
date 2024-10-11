@@ -9,6 +9,7 @@
 #include <QTime>
 #include <QTimer>
 
+
 class QtTimer {
 public:
     QtTimer();
@@ -25,8 +26,8 @@ public:
 
     bool isRunning() const;
 
-private:
-    QTimer  timer; //serve per accedere alla funzione timeout di Singal per aggiornare in autimatico il tempo
+
+    QTimer * timer; //deve essere un puntatore per accedere alla funzione timeout di Singal per aggiornare in autimatico il tempo
     // bool active; QTimer ha già un metodo per vedere se è attivo o no
 };
 

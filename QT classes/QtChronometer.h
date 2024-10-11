@@ -10,11 +10,12 @@
 class QtChronometer {
 public:
     QtChronometer();
-    void restartTimer();
+    void restartChronometer();
+    bool startChronometer();
+    bool stopChronometer();
     QTime getTime() const;
-    bool startTimer();
-    bool stopTimer();
     bool isRunning();
+    QString getTimeString() const;
 private:
     QElapsedTimer elapsedTimer;
     bool active;

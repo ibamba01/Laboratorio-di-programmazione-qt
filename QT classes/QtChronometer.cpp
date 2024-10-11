@@ -7,7 +7,7 @@ QtChronometer::QtChronometer() {
 active = false;
 }
 
-bool QtChronometer::startTimer(){
+bool QtChronometer::startChronometer(){
     if(!active){
         elapsedTimer.start();
         active = true;
@@ -23,7 +23,7 @@ bool QtChronometer::isRunning() {
     }
     return active;
 }
-bool QtChronometer::stopTimer() {
+bool QtChronometer::stopChronometer() {
     if (active){
         elapsedTimer.invalidate();
         active = false;
@@ -31,7 +31,7 @@ bool QtChronometer::stopTimer() {
     }
     return false;
 }
-void QtChronometer::restartTimer() {
+void QtChronometer::restartChronometer() {
     elapsedTimer.restart();
     active = true;
 }
@@ -41,4 +41,11 @@ QTime QtChronometer::getTime() const {
         return QTime(0, 0).addMSecs(elapsedTimer.elapsed());
     }
     return QTime(0,0);  // Se il timer non è in esecuzione, restituisce 00:00:00
+}
+
+QString QtChronometer::getTimeString() const {
+    if (active) {
+      return  QTime(0,0).addMSecs(elapsedTimer.elapsed()).toString("hh:mm:ss:zzz");
+    }
+
 }

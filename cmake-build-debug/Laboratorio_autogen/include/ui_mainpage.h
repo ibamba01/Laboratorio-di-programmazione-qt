@@ -16,6 +16,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,144 +24,184 @@ QT_BEGIN_NAMESPACE
 class Ui_mainpage
 {
 public:
+    QPushButton *AvviaResetButtonCronometro;
+    QWidget *verticalLayoutWidget_4;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *OraLabel;
+    QLabel *DisplayOra;
     QLabel *TimerLabel;
+    QPushButton *AvviaStopButtonTimer;
+    QLabel *DisplayTimer;
+    QWidget *verticalLayoutWidget_3;
+    QVBoxLayout *verticalLayout_3;
+    QLabel *DataLabel;
+    QLabel *DisplayData;
+    QLabel *OrologioLable;
+    QWidget *verticalLayoutWidget_2;
+    QVBoxLayout *verticalLayout_2;
+    QRadioButton *RadioData1;
+    QRadioButton *RadioData2;
+    QLabel *DataVisLabel;
+    QLabel *DisplayCronometro;
+    QLabel *CronometroLable;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QRadioButton *RadioOra1;
+    QRadioButton *RadioOra3;
+    QRadioButton *RadioOra2;
+    QLabel *OraVisLabel;
     QWidget *formLayoutWidget;
     QFormLayout *formLayout;
-    QPushButton *TensecButtomTimer;
-    QPushButton *SixtyButtonTimer;
-    QPushButton *OneMinButtonTimer;
-    QPushButton *ThyMinButtonTimer;
-    QPushButton *TwoHButtonTimer;
-    QLineEdit *CustomTimer;
-    QLabel *DisplayTimer;
-    QLabel *CronometroLable;
-    QLabel *DisplayCronometro;
-    QPushButton *AvviaResetButtonCronometro;
-    QPushButton *AvviaStopButtonTimer;
-    QLabel *OrologioLable;
-    QLabel *DisplayData;
-    QLabel *OrologioOraLable;
-    QLabel *DisplayOra;
-    QLabel *label;
-    QRadioButton *radioOra;
-    QRadioButton *radioOra_2;
-    QRadioButton *radioOra_3;
-    QRadioButton *radioData;
-    QRadioButton *RadioData;
-    QLabel *label_2;
-    QLabel *label_3;
-    QPushButton *pushButton;
+    QPushButton *Timer1Button;
+    QPushButton *Timer2Button;
+    QPushButton *Timer3Button;
+    QPushButton *Timer4Button;
+    QPushButton *Timer5Button;
+    QLineEdit *TimerCustomButtom;
 
     void setupUi(QWidget *mainpage)
     {
         if (mainpage->objectName().isEmpty())
             mainpage->setObjectName("mainpage");
         mainpage->resize(404, 281);
+        AvviaResetButtonCronometro = new QPushButton(mainpage);
+        AvviaResetButtonCronometro->setObjectName("AvviaResetButtonCronometro");
+        AvviaResetButtonCronometro->setGeometry(QRect(182, 70, 161, 24));
+        verticalLayoutWidget_4 = new QWidget(mainpage);
+        verticalLayoutWidget_4->setObjectName("verticalLayoutWidget_4");
+        verticalLayoutWidget_4->setGeometry(QRect(162, 200, 160, 80));
+        verticalLayout_4 = new QVBoxLayout(verticalLayoutWidget_4);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        verticalLayout_4->setContentsMargins(0, 0, 0, 0);
+        OraLabel = new QLabel(verticalLayoutWidget_4);
+        OraLabel->setObjectName("OraLabel");
+
+        verticalLayout_4->addWidget(OraLabel);
+
+        DisplayOra = new QLabel(verticalLayoutWidget_4);
+        DisplayOra->setObjectName("DisplayOra");
+        DisplayOra->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout_4->addWidget(DisplayOra);
+
         TimerLabel = new QLabel(mainpage);
         TimerLabel->setObjectName("TimerLabel");
-        TimerLabel->setGeometry(QRect(10, 10, 91, 31));
+        TimerLabel->setGeometry(QRect(2, 0, 91, 31));
+        AvviaStopButtonTimer = new QPushButton(mainpage);
+        AvviaStopButtonTimer->setObjectName("AvviaStopButtonTimer");
+        AvviaStopButtonTimer->setGeometry(QRect(2, 150, 161, 24));
+        DisplayTimer = new QLabel(mainpage);
+        DisplayTimer->setObjectName("DisplayTimer");
+        DisplayTimer->setGeometry(QRect(0, 30, 161, 31));
+        DisplayTimer->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        verticalLayoutWidget_3 = new QWidget(mainpage);
+        verticalLayoutWidget_3->setObjectName("verticalLayoutWidget_3");
+        verticalLayoutWidget_3->setGeometry(QRect(2, 200, 160, 80));
+        verticalLayout_3 = new QVBoxLayout(verticalLayoutWidget_3);
+        verticalLayout_3->setObjectName("verticalLayout_3");
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
+        DataLabel = new QLabel(verticalLayoutWidget_3);
+        DataLabel->setObjectName("DataLabel");
+
+        verticalLayout_3->addWidget(DataLabel);
+
+        DisplayData = new QLabel(verticalLayoutWidget_3);
+        DisplayData->setObjectName("DisplayData");
+        DisplayData->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout_3->addWidget(DisplayData);
+
+        OrologioLable = new QLabel(mainpage);
+        OrologioLable->setObjectName("OrologioLable");
+        OrologioLable->setGeometry(QRect(2, 180, 81, 16));
+        verticalLayoutWidget_2 = new QWidget(mainpage);
+        verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
+        verticalLayoutWidget_2->setGeometry(QRect(292, 120, 56, 51));
+        verticalLayout_2 = new QVBoxLayout(verticalLayoutWidget_2);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        RadioData1 = new QRadioButton(verticalLayoutWidget_2);
+        RadioData1->setObjectName("RadioData1");
+
+        verticalLayout_2->addWidget(RadioData1);
+
+        RadioData2 = new QRadioButton(verticalLayoutWidget_2);
+        RadioData2->setObjectName("RadioData2");
+
+        verticalLayout_2->addWidget(RadioData2);
+
+        DataVisLabel = new QLabel(mainpage);
+        DataVisLabel->setObjectName("DataVisLabel");
+        DataVisLabel->setGeometry(QRect(282, 100, 111, 16));
+        DisplayCronometro = new QLabel(mainpage);
+        DisplayCronometro->setObjectName("DisplayCronometro");
+        DisplayCronometro->setGeometry(QRect(182, 30, 161, 31));
+        DisplayCronometro->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        CronometroLable = new QLabel(mainpage);
+        CronometroLable->setObjectName("CronometroLable");
+        CronometroLable->setGeometry(QRect(192, 20, 81, 16));
+        verticalLayoutWidget = new QWidget(mainpage);
+        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
+        verticalLayoutWidget->setGeometry(QRect(180, 120, 62, 80));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        RadioOra1 = new QRadioButton(verticalLayoutWidget);
+        RadioOra1->setObjectName("RadioOra1");
+
+        verticalLayout->addWidget(RadioOra1);
+
+        RadioOra3 = new QRadioButton(verticalLayoutWidget);
+        RadioOra3->setObjectName("RadioOra3");
+
+        verticalLayout->addWidget(RadioOra3);
+
+        RadioOra2 = new QRadioButton(verticalLayoutWidget);
+        RadioOra2->setObjectName("RadioOra2");
+
+        verticalLayout->addWidget(RadioOra2);
+
+        OraVisLabel = new QLabel(mainpage);
+        OraVisLabel->setObjectName("OraVisLabel");
+        OraVisLabel->setGeometry(QRect(172, 100, 101, 16));
         formLayoutWidget = new QWidget(mainpage);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(10, 70, 160, 91));
+        formLayoutWidget->setGeometry(QRect(2, 60, 160, 91));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
-        TensecButtomTimer = new QPushButton(formLayoutWidget);
-        TensecButtomTimer->setObjectName("TensecButtomTimer");
+        Timer1Button = new QPushButton(formLayoutWidget);
+        Timer1Button->setObjectName("Timer1Button");
 
-        formLayout->setWidget(0, QFormLayout::LabelRole, TensecButtomTimer);
+        formLayout->setWidget(0, QFormLayout::LabelRole, Timer1Button);
 
-        SixtyButtonTimer = new QPushButton(formLayoutWidget);
-        SixtyButtonTimer->setObjectName("SixtyButtonTimer");
+        Timer2Button = new QPushButton(formLayoutWidget);
+        Timer2Button->setObjectName("Timer2Button");
 
-        formLayout->setWidget(0, QFormLayout::FieldRole, SixtyButtonTimer);
+        formLayout->setWidget(0, QFormLayout::FieldRole, Timer2Button);
 
-        OneMinButtonTimer = new QPushButton(formLayoutWidget);
-        OneMinButtonTimer->setObjectName("OneMinButtonTimer");
+        Timer3Button = new QPushButton(formLayoutWidget);
+        Timer3Button->setObjectName("Timer3Button");
 
-        formLayout->setWidget(1, QFormLayout::LabelRole, OneMinButtonTimer);
+        formLayout->setWidget(1, QFormLayout::LabelRole, Timer3Button);
 
-        ThyMinButtonTimer = new QPushButton(formLayoutWidget);
-        ThyMinButtonTimer->setObjectName("ThyMinButtonTimer");
+        Timer4Button = new QPushButton(formLayoutWidget);
+        Timer4Button->setObjectName("Timer4Button");
 
-        formLayout->setWidget(1, QFormLayout::FieldRole, ThyMinButtonTimer);
+        formLayout->setWidget(1, QFormLayout::FieldRole, Timer4Button);
 
-        TwoHButtonTimer = new QPushButton(formLayoutWidget);
-        TwoHButtonTimer->setObjectName("TwoHButtonTimer");
+        Timer5Button = new QPushButton(formLayoutWidget);
+        Timer5Button->setObjectName("Timer5Button");
 
-        formLayout->setWidget(2, QFormLayout::LabelRole, TwoHButtonTimer);
+        formLayout->setWidget(2, QFormLayout::LabelRole, Timer5Button);
 
-        CustomTimer = new QLineEdit(formLayoutWidget);
-        CustomTimer->setObjectName("CustomTimer");
+        TimerCustomButtom = new QLineEdit(formLayoutWidget);
+        TimerCustomButtom->setObjectName("TimerCustomButtom");
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, CustomTimer);
+        formLayout->setWidget(2, QFormLayout::FieldRole, TimerCustomButtom);
 
-        DisplayTimer = new QLabel(mainpage);
-        DisplayTimer->setObjectName("DisplayTimer");
-        DisplayTimer->setGeometry(QRect(8, 40, 161, 31));
-        DisplayTimer->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        CronometroLable = new QLabel(mainpage);
-        CronometroLable->setObjectName("CronometroLable");
-        CronometroLable->setGeometry(QRect(200, 20, 81, 16));
-        DisplayCronometro = new QLabel(mainpage);
-        DisplayCronometro->setObjectName("DisplayCronometro");
-        DisplayCronometro->setGeometry(QRect(200, 40, 161, 31));
-        DisplayCronometro->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        AvviaResetButtonCronometro = new QPushButton(mainpage);
-        AvviaResetButtonCronometro->setObjectName("AvviaResetButtonCronometro");
-        AvviaResetButtonCronometro->setGeometry(QRect(200, 70, 161, 24));
-        AvviaStopButtonTimer = new QPushButton(mainpage);
-        AvviaStopButtonTimer->setObjectName("AvviaStopButtonTimer");
-        AvviaStopButtonTimer->setGeometry(QRect(10, 160, 161, 24));
-        OrologioLable = new QLabel(mainpage);
-        OrologioLable->setObjectName("OrologioLable");
-        OrologioLable->setGeometry(QRect(10, 190, 81, 16));
-        DisplayData = new QLabel(mainpage);
-        DisplayData->setObjectName("DisplayData");
-        DisplayData->setGeometry(QRect(20, 240, 161, 31));
-        DisplayData->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        OrologioOraLable = new QLabel(mainpage);
-        OrologioOraLable->setObjectName("OrologioOraLable");
-        OrologioOraLable->setGeometry(QRect(190, 220, 81, 16));
-        DisplayOra = new QLabel(mainpage);
-        DisplayOra->setObjectName("DisplayOra");
-        DisplayOra->setGeometry(QRect(180, 240, 161, 31));
-        DisplayOra->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        label = new QLabel(mainpage);
-        label->setObjectName("label");
-        label->setGeometry(QRect(30, 220, 49, 16));
-        radioOra = new QRadioButton(mainpage);
-        radioOra->setObjectName("radioOra");
-        radioOra->setGeometry(QRect(190, 130, 92, 20));
-        radioOra_2 = new QRadioButton(mainpage);
-        radioOra_2->setObjectName("radioOra_2");
-        radioOra_2->setGeometry(QRect(190, 160, 92, 20));
-        radioOra_3 = new QRadioButton(mainpage);
-        radioOra_3->setObjectName("radioOra_3");
-        radioOra_3->setGeometry(QRect(190, 190, 92, 20));
-        radioData = new QRadioButton(mainpage);
-        radioData->setObjectName("radioData");
-        radioData->setGeometry(QRect(310, 140, 92, 20));
-        RadioData = new QRadioButton(mainpage);
-        RadioData->setObjectName("RadioData");
-        RadioData->setGeometry(QRect(310, 170, 92, 20));
-        label_2 = new QLabel(mainpage);
-        label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(180, 110, 101, 16));
-        label_3 = new QLabel(mainpage);
-        label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(290, 110, 111, 16));
-        pushButton = new QPushButton(mainpage);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(320, 240, 75, 24));
 
         retranslateUi(mainpage);
-        QObject::connect(TensecButtomTimer, SIGNAL(clicked()), mainpage, SLOT(doit_when_10secbtn_ispressed()));
-        QObject::connect(SixtyButtonTimer, SIGNAL(clicked()), mainpage, SLOT(doit_when_60secbtn_ispressed()));
-        QObject::connect(ThyMinButtonTimer, SIGNAL(clicked()), mainpage, SLOT(doit_when_30minsecbtn_ispressed()));
-        QObject::connect(OneMinButtonTimer, SIGNAL(clicked()), mainpage, SLOT(doit_when_1minbtn_ispressed()));
-        QObject::connect(TwoHButtonTimer, SIGNAL(clicked()), mainpage, SLOT(doit_when_2orebtn_ispressed()));
-        QObject::connect(pushButton, &QPushButton::clicked, AvviaResetButtonCronometro, qOverload<>(&QPushButton::click));
 
         QMetaObject::connectSlotsByName(mainpage);
     } // setupUi
@@ -168,31 +209,30 @@ public:
     void retranslateUi(QWidget *mainpage)
     {
         mainpage->setWindowTitle(QCoreApplication::translate("mainpage", "mainpage", nullptr));
-        TimerLabel->setText(QCoreApplication::translate("mainpage", "Timer", nullptr));
-        TensecButtomTimer->setText(QCoreApplication::translate("mainpage", "10 sec", nullptr));
-        SixtyButtonTimer->setText(QCoreApplication::translate("mainpage", "60 sec", nullptr));
-        OneMinButtonTimer->setText(QCoreApplication::translate("mainpage", "1 min", nullptr));
-        ThyMinButtonTimer->setText(QCoreApplication::translate("mainpage", "30 min", nullptr));
-        TwoHButtonTimer->setText(QCoreApplication::translate("mainpage", "2 ore", nullptr));
-        CustomTimer->setText(QCoreApplication::translate("mainpage", "custom", nullptr));
-        DisplayTimer->setText(QCoreApplication::translate("mainpage", "00:00:00", nullptr));
-        CronometroLable->setText(QCoreApplication::translate("mainpage", "Cronometro", nullptr));
-        DisplayCronometro->setText(QCoreApplication::translate("mainpage", "00:00:00", nullptr));
         AvviaResetButtonCronometro->setText(QCoreApplication::translate("mainpage", "Avvia/Reset", nullptr));
-        AvviaStopButtonTimer->setText(QCoreApplication::translate("mainpage", "Avvia/Stop", nullptr));
-        OrologioLable->setText(QCoreApplication::translate("mainpage", "Orologio", nullptr));
-        DisplayData->setText(QCoreApplication::translate("mainpage", "00:00:0000", nullptr));
-        OrologioOraLable->setText(QCoreApplication::translate("mainpage", "Ora", nullptr));
+        OraLabel->setText(QCoreApplication::translate("mainpage", "Ora", nullptr));
         DisplayOra->setText(QCoreApplication::translate("mainpage", "00:00:0000", nullptr));
-        label->setText(QCoreApplication::translate("mainpage", "data", nullptr));
-        radioOra->setText(QCoreApplication::translate("mainpage", "HMS", nullptr));
-        radioOra_2->setText(QCoreApplication::translate("mainpage", "HM", nullptr));
-        radioOra_3->setText(QCoreApplication::translate("mainpage", "HMSA", nullptr));
-        radioData->setText(QCoreApplication::translate("mainpage", "DMY", nullptr));
-        RadioData->setText(QCoreApplication::translate("mainpage", "GDM", nullptr));
-        label_2->setText(QCoreApplication::translate("mainpage", "Visualizzazione Ora", nullptr));
-        label_3->setText(QCoreApplication::translate("mainpage", "Visualizzazione Data", nullptr));
-        pushButton->setText(QCoreApplication::translate("mainpage", "PushButton", nullptr));
+        TimerLabel->setText(QCoreApplication::translate("mainpage", "Timer", nullptr));
+        AvviaStopButtonTimer->setText(QCoreApplication::translate("mainpage", "Avvia/Stop", nullptr));
+        DisplayTimer->setText(QCoreApplication::translate("mainpage", "00:00:00", nullptr));
+        DataLabel->setText(QCoreApplication::translate("mainpage", "data", nullptr));
+        DisplayData->setText(QCoreApplication::translate("mainpage", "00:00:0000", nullptr));
+        OrologioLable->setText(QCoreApplication::translate("mainpage", "Orologio", nullptr));
+        RadioData1->setText(QCoreApplication::translate("mainpage", "GDM", nullptr));
+        RadioData2->setText(QCoreApplication::translate("mainpage", "DMY", nullptr));
+        DataVisLabel->setText(QCoreApplication::translate("mainpage", "Visualizzazione Data", nullptr));
+        DisplayCronometro->setText(QCoreApplication::translate("mainpage", "00:00:00:000", nullptr));
+        CronometroLable->setText(QCoreApplication::translate("mainpage", "Cronometro", nullptr));
+        RadioOra1->setText(QCoreApplication::translate("mainpage", "HMS", nullptr));
+        RadioOra3->setText(QCoreApplication::translate("mainpage", "HMSA", nullptr));
+        RadioOra2->setText(QCoreApplication::translate("mainpage", "HM", nullptr));
+        OraVisLabel->setText(QCoreApplication::translate("mainpage", "Visualizzazione Ora", nullptr));
+        Timer1Button->setText(QCoreApplication::translate("mainpage", "10 sec", nullptr));
+        Timer2Button->setText(QCoreApplication::translate("mainpage", "30 sec", nullptr));
+        Timer3Button->setText(QCoreApplication::translate("mainpage", "1 min", nullptr));
+        Timer4Button->setText(QCoreApplication::translate("mainpage", "30 min", nullptr));
+        Timer5Button->setText(QCoreApplication::translate("mainpage", "2 ore", nullptr));
+        TimerCustomButtom->setText(QCoreApplication::translate("mainpage", "custom", nullptr));
     } // retranslateUi
 
 };

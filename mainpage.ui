@@ -188,7 +188,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>00:00:00</string>
+    <string>00:00:00:000</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -292,7 +292,7 @@
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QPushButton" name="TimerButton">
+     <widget class="QPushButton" name="Timer5Button">
       <property name="text">
        <string>2 ore</string>
       </property>

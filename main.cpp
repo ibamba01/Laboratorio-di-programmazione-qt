@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
   //  t.printprova(t.getDurationString());
 
     //main
-    Qclock w;
+    mainpage w;
     w.show();
     return QApplication::exec();
 }

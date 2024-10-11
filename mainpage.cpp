@@ -7,16 +7,22 @@
 #include "mainpage.h"
 #include "ui_mainpage.h"
 
-
+//---------costruttore e distruttore----------------
 mainpage::mainpage(QWidget *parent) :
         QWidget(parent), ui(new Ui::mainpage) {
     ui->setupUi(this);
     updater = new QTimer(this);
-    QObject::connect(updater,SIGNAL(timeout()),this,SLOT(updateInfo()));
-
-    updater->start(1000);
+    QObject::connect(updater,SIGNAL(timeout()),this,SLOT(Update()));
+    updater->start(1000); //aggiorna ogni secondo
 }
 
+mainpage::~mainpage() {
+    delete ui;
+    delete updater;
+    delete timerKeeper;
+}
+
+//------------metodi current----------------
 void mainpage::currentQTimeToTime(int &h, int &m, int &s) const {
     QTime currentTime = QTime::currentTime();
     int msec = currentTime.msecsSinceStartOfDay();
@@ -33,49 +39,148 @@ void mainpage::currentQDateToDate(int &d, int &m, int &y) const {
     y=currentDate.year();
 }
 
-int valoretimer;
+//------------set timer----------------
+QString valoretimer;
 //10 sec timer
-void mainpage::on_Timer1Button_clicked()
-{
-    valoretimer = 10;
+void mainpage::on_Timer1Button_clicked() {
+    ui->DisplayTimer->clear();
+
+    valoretimer = "00:00:10";
+    QTime timeInput = QTime::fromString(valoretimer);
+    timerKeeper->setTimer(timeInput);
+    ui->DisplayTimer->setText(timeInput.toString());
 }
 //30 sec timer
-void mainpage::on_Timer2Button_clicked()
-{
-    valoretimer = 30;
+void mainpage::on_Timer2Button_clicked() {
+    ui->DisplayTimer->clear();
+
+    valoretimer = "00:00:30";
+    QTime timeInput = QTime::fromString(valoretimer);
+    timerKeeper->setTimer(timeInput);
+    ui->DisplayTimer->setText(timeInput.toString());
 }
 //1 min timer
-void mainpage::on_Timer3Button_clicked()
-{
-    valoretimer = 60;
+void mainpage::on_Timer3Button_clicked() {
+    ui->DisplayTimer->clear();
+
+    valoretimer = "00:01:00";
+    QTime timeInput = QTime::fromString(valoretimer);
+    timerKeeper->setTimer(timeInput);
+    ui->DisplayTimer->setText(timeInput.toString());
 }
 //5 min timer
-void mainpage::on_Timer4Button_clicked()
-{
-    valoretimer = 300;
+void mainpage::on_Timer4Button_clicked() {
+    ui->DisplayTimer->clear();
+
+    valoretimer = "00:05:00";
+    QTime timeInput = QTime::fromString(valoretimer);
+    timerKeeper->setTimer(timeInput);
+    ui->DisplayTimer->setText(timeInput.toString());
 }
 //2 ore timer
-void mainpage::on_Timer5Button_clicked()
-{
-    valoretimer = 7200;
+void mainpage::on_Timer5Button_clicked() {
+    ui->DisplayTimer->clear();
+
+    valoretimer = "02:00:00";
+    QTime timeInput = QTime::fromString(valoretimer);
+    timerKeeper->setTimer(timeInput);
+    ui->DisplayTimer->setText(timeInput.toString());
 }
-void mainpage::updateInfo(){
+
+void mainpage::on_TimerCustomButtom_editingFinished() {
+    ui->DisplayTimer->clear();
+
+    QString input = ui->TimerCustomButtom->text();
+    QTime timeInput = QTime::fromString(input);
+
+    if (timeInput.isValid()) {
+        timerKeeper->setTimer(timeInput);
+        ui->DisplayTimer->setText(timeInput.toString());
+    }
+    else {
+        ui->DisplayTimer->setText("Invalid time");
+    }
+    ui->TimerCustomButtom->clear();
+}
+
+//------------timer metodi----------------
+void mainpage::timeIsUpWarning() {
+    timerKeeper->stopTimer();
+    ui->DisplayTimer->setText("Time's up!");
+}
+//------------update----------------
+void mainpage::Update(){
     int h,m,s;
+    //classe QtClock
     currentQTimeToTime(h,m,s);
     clockKeeper->setTime(h,m,s);
-   // ui->timeLabel->setText(clockKeeper->showTime());
+    ui->DisplayOra->setText(clockKeeper->showTime());
+    //DisplayOra è il nome del label inizializzata a 00:00:00 che viene usata vedere l'ora
 
     int d,mon,y;
     currentQDateToDate(d,mon,y);
     clockKeeper->setDate(d,mon,y);
-    //ui->dateLabel->setText(clockKeeper->showDate());
+    ui->DisplayData->setText(clockKeeper->showDate());
+    //DisplayData è il nome del label inizializzata a 00:00:0000 che viene usata vedere i tre tipi di data
 
-   // if (timerKeeper->isTimerActive())
-      //  ui->timerLabel->setText(timerKeeper->GetTimeString());
+    //classe QtTimer
+    if (timerKeeper->isRunning())
+        ui->DisplayTimer->setText(timerKeeper->GetTimeString());
+    //DisplayTimer è il nome del label inizializzata a 00:00:000 che viene usata vedere il tempo rimanente del timer
+
+    //classe QtChronometer
+    if (chronometerKeeper->isRunning())
+        ui->DisplayCronometro->setText(chronometerKeeper->getTimeString());
+    //DisplayCronometro è il nome del label inizializzata a 00:00:00:000 che viene usata vedere il tempo trascorso del cronometro
 }
 
-mainpage::~mainpage() {
-    delete ui;
-    delete updater;
-    delete timerKeeper;
+//--------------Strat e Stop----------------
+void mainpage::on_AvviaStopButtonTimer_clicked(){
+    if(! timerKeeper->isRunning()){
+        timerKeeper->startTimer();
+        QObject::connect(timerKeeper->timer,SIGNAL(timeout()),this,SLOT(timeIsUpWarning()));
+        // connect ha bisogno di un puntatore di un puntatore come argometo
+    }
+    else
+        timerKeeper->pause();
 }
+void mainpage::on_AvviaResetButtonCronometro_clicked() {
+    if(! chronometerKeeper->isRunning())
+        chronometerKeeper->startChronometer();
+    else
+        chronometerKeeper->restartChronometer();
+}
+
+
+
+//--------set view mode-----------------
+void mainpage::on_RadioData1_clicked() {
+    clockKeeper->setViewModeDate(DateFormat::DMY);
+    Update();
+}
+
+
+void mainpage::on_RadioData2_clicked() {
+    clockKeeper->setViewModeDate(DateFormat::GDM);
+    Update();
+}
+
+
+void mainpage::on_RadioOra1_clicked() {
+    clockKeeper->setViewModeTime(TimeFormat::HMS);
+    Update();
+}
+
+
+void mainpage::on_RadioOra2_clicked() {
+    clockKeeper->setViewModeTime(TimeFormat::HM);
+    Update();
+}
+
+
+void mainpage::on_RadioOra3_clicked() {
+    clockKeeper->setViewModeTime(TimeFormat::HMSA);
+    Update();
+}
+
+
