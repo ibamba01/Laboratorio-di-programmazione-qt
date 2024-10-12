@@ -1,39 +1,47 @@
 cmake_minimum_required(VERSION 3.29)
 project(Laboratorio)
 
+add_subdirectory(test)
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-set(CMAKE_PREFIX_PATH "C:/Qt/6.8.0/mingw_64")
 
-find_package(Qt6 COMPONENTS
-        Core
-        Gui
-        Widgets
-        REQUIRED)
 
-add_executable(Laboratorio
+set(QT_VERSION 6)
+set(REQUIRED_LIBS Core Gui Widgets)
+set(REQUIRED_LIBS_QUALIFIED Qt6::Core Qt6::Gui Qt6::Widgets)
+
+add_executable(${PROJECT_NAME}
         main.cpp
         GUI/mainpage.cpp
         GUI/mainpage.h
         GUI/mainpage.ui
-        "QT classes/QtTimer.cpp"
-        "QT classes/QtTimer.h"
-        "QT classes/QtClock.cpp"
-        "QT classes/QtClock.h"
-        "QT classes/QtChronometer.cpp"
-        "QT classes/QtChronometer.h"
+        QtTimer.cpp
+        QtTimer.h
+        QtClock.cpp
+        QtClock.h
+        QtChronometer.cpp
+        QtChronometer.h
 )
-target_link_libraries(Laboratorio
-        Qt::Core
-        Qt::Gui
-        Qt::Widgets
-)
+find_package(Qt${QT_VERSION} COMPONENTS ${REQUIRED_LIBS} REQUIRED)
+target_link_libraries(${PROJECT_NAME} ${REQUIRED_LIBS_QUALIFIED})
+
+
 set(SOURCE_FILES GUI/mainpage.cpp
         GUI/mainpage.h
-        GUI/mainpage.ui)
+        GUI/mainpage.ui
+        QtTimer.cpp
+        QtTimer.h
+        QtClock.cpp
+        QtClock.h
+        QtChronometer.cpp
+        QtChronometer.h
+)
+add_library(core ${SOURCE_FILES})
+target_link_libraries(core ${REQUIRED_LIBS_QUALIFIED})
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     set(DEBUG_SUFFIX)

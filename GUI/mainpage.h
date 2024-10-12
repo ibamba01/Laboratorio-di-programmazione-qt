@@ -8,11 +8,9 @@
 #include <QMainWindow>
 #include <QTimer>
 #include "mainpage.h"
-#include <memory>
-#include "../QT classes/QtClock.h"
-#include "../QT classes/QtTimer.h"
-#include "../QT classes/QtChronometer.h"
-
+#include "../QtTimer.h"
+#include "../QtChronometer.h"
+#include "../QtClock.h"
 
 
 

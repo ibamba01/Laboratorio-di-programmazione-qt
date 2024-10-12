@@ -5,11 +5,10 @@
 #ifndef LABORATORIO_QTCLOCK_H
 #define LABORATORIO_QTCLOCK_H
 
-#include <QDateTime>
 #include <QDate>
 #include <QTime>
-#include <QTimer>
 #include <QWidget>
+
 enum class TimeFormat {HMS, HM, HMSA};
 enum class DateFormat {DMY, GDM, GMA};
 class QtClock {

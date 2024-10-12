@@ -265,21 +265,21 @@
 			null
 		],
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtChronometer.h",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QtChronometer.h",
 			"MU",
-			"FXMDLGC4MH/moc_QtChronometer.cpp",
+			"EWIEGA46WW/moc_QtChronometer.cpp",
 			null
 		],
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtClock.h",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QtClock.h",
 			"MU",
-			"FXMDLGC4MH/moc_QtClock.cpp",
+			"EWIEGA46WW/moc_QtClock.cpp",
 			null
 		],
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtTimer.h",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QtTimer.h",
 			"MU",
-			"FXMDLGC4MH/moc_QtTimer.cpp",
+			"EWIEGA46WW/moc_QtTimer.cpp",
 			null
 		]
 	],
@@ -322,15 +322,7 @@
 		"C:/Program Files/JetBrains/CLion 2022.3.2/bin/mingw/x86_64-w64-mingw32/include",
 		"/MinGW/include"
 	],
-	"MOC_MACRO_NAMES" : 
-	[
-		"Q_OBJECT",
-		"Q_GADGET",
-		"Q_NAMESPACE",
-		"Q_NAMESPACE_EXPORT",
-		"Q_GADGET_EXPORT",
-		"Q_ENUM_NS"
-	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
 	"MOC_OPTIONS" : [],
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
@@ -361,20 +353,12 @@
 			null
 		],
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtChronometer.cpp",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/QtChronometer.cpp",
 			"MU",
 			null
 		],
-		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtClock.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtTimer.cpp",
-			"MU",
-			null
-		],
+		[ "C:/Users/Pietro/CLionProjects/Laboratorio/QtClock.cpp", "MU", null ],
+		[ "C:/Users/Pietro/CLionProjects/Laboratorio/QtTimer.cpp", "MU", null ],
 		[ "C:/Users/Pietro/CLionProjects/Laboratorio/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

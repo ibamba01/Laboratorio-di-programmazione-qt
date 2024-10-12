@@ -29,7 +29,7 @@ QString QtClock::showTime() const { // utilizzano i format di Qt
             uscita="hh:mm";
             break;
         case TimeFormat::HMSA:
-            uscita= "hh:mm:ss a";
+            uscita= "h:mm:ss a";
             break;
     }
     return Time.toString(uscita);
