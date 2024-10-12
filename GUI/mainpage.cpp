@@ -193,9 +193,12 @@ void mainpage::on_AvviaStopButtonTimer_clicked(){
 }
 void mainpage::on_AvviaStopButtonCronometro_clicked() {
     if (!chronometerKeeper.isRunning()) {
-        chronometerKeeper.restartChronometer();
+        chronometerKeeper.startChronometer();
         ui->DisplayError->clear();}
-    else chronometerKeeper.stopChronometer();
+    else {
+        chronometerKeeper.stopChronometer();
+        ui->DisplayCronometro->setText("00:00:00");
+    }
 }
 void mainpage::on_ResetCronometro_clicked(){
     chronometerKeeper.restartChronometer();
