@@ -259,21 +259,9 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/GUI/qclock.h",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/GUI/mainpage.h",
 			"MU",
-			"2LCCYRVYXB/moc_qclock.cpp",
-			null
-		],
-		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/Non QT classes/Clock.h",
-			"MU",
-			"SB4EULUBIA/moc_Clock.cpp",
-			null
-		],
-		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/Non QT classes/Timer.h",
-			"MU",
-			"SB4EULUBIA/moc_Timer.cpp",
+			"2LCCYRVYXB/moc_mainpage.cpp",
 			null
 		],
 		[
@@ -292,12 +280,6 @@
 			"C:/Users/Pietro/CLionProjects/Laboratorio/QT classes/QtTimer.h",
 			"MU",
 			"FXMDLGC4MH/moc_QtTimer.cpp",
-			null
-		],
-		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.h",
-			"MU",
-			"EWIEGA46WW/moc_mainpage.cpp",
 			null
 		]
 	],
@@ -374,17 +356,7 @@
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/GUI/qclock.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/Non QT classes/Clock.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/Pietro/CLionProjects/Laboratorio/Non QT classes/Timer.cpp",
+			"C:/Users/Pietro/CLionProjects/Laboratorio/GUI/mainpage.cpp",
 			"MU",
 			null
 		],
@@ -403,8 +375,7 @@
 			"MU",
 			null
 		],
-		[ "C:/Users/Pietro/CLionProjects/Laboratorio/main.cpp", "MU", null ],
-		[ "C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.cpp", "MU", null ]
+		[ "C:/Users/Pietro/CLionProjects/Laboratorio/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

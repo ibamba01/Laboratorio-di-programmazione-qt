@@ -610,12 +610,8 @@ Laboratorio_autogen/timestamp: \
 	C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
 	C:/Qt/6.8.0/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessAliasTargets.cmake \
 	C:/Users/Pietro/CLionProjects/Laboratorio/CMakeLists.txt \
-	C:/Users/Pietro/CLionProjects/Laboratorio/GUI/qclock.cpp \
-	C:/Users/Pietro/CLionProjects/Laboratorio/GUI/qclock.h \
-	C:/Users/Pietro/CLionProjects/Laboratorio/Non\ QT\ classes/Clock.cpp \
-	C:/Users/Pietro/CLionProjects/Laboratorio/Non\ QT\ classes/Clock.h \
-	C:/Users/Pietro/CLionProjects/Laboratorio/Non\ QT\ classes/Timer.cpp \
-	C:/Users/Pietro/CLionProjects/Laboratorio/Non\ QT\ classes/Timer.h \
+	C:/Users/Pietro/CLionProjects/Laboratorio/GUI/mainpage.cpp \
+	C:/Users/Pietro/CLionProjects/Laboratorio/GUI/mainpage.h \
 	C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtChronometer.cpp \
 	C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtChronometer.h \
 	C:/Users/Pietro/CLionProjects/Laboratorio/QT\ classes/QtClock.cpp \
@@ -628,8 +624,5 @@ Laboratorio_autogen/timestamp: \
 	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake \
 	C:/Users/Pietro/CLionProjects/Laboratorio/cmake-build-debug/Laboratorio_autogen/moc_predefs.h \
 	C:/Users/Pietro/CLionProjects/Laboratorio/main.cpp \
-	C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.cpp \
-	C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.h \
-	C:/Users/Pietro/CLionProjects/Laboratorio/GUI/qclock.ui \
-	C:/Users/Pietro/CLionProjects/Laboratorio/mainpage.ui \
+	C:/Users/Pietro/CLionProjects/Laboratorio/GUI/mainpage.ui \
 	C:/Program\ Files/JetBrains/CLion\ 2022.3.2/bin/cmake/win/x64/bin/cmake.exe

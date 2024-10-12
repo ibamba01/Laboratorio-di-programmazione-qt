@@ -17,9 +17,10 @@ public:
     QTime getTime() const;
     bool isRunning();
     QString getTimeString() const;
+    bool active;
 private:
     QElapsedTimer  elapsedTimer;
-    bool active;
+
 };
 
 

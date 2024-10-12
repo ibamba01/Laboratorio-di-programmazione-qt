@@ -39,6 +39,9 @@ void mainpage::setUp() {
     QString red = "color: Red";
     ui->OraLabel_2->setStyleSheet(red);
     ui->DataLabel->setStyleSheet(red);
+    ui->DisplayError->setStyleSheet(red);
+    QString bach = "background-color: transparent";
+    ui->listWidget->setStyleSheet(bach);
     //inizializzo la tab
     ui->tabWidget->setCurrentIndex(0);
 }
@@ -188,14 +191,34 @@ void mainpage::on_AvviaStopButtonTimer_clicked(){
     else
         timerKeeper.pause();
 }
-void mainpage::on_AvviaResetButtonCronometro_clicked() {
-   if(! chronometerKeeper.isRunning())
-
-        chronometerKeeper.startChronometer();
-   else
-       chronometerKeeper.restartChronometer();
+void mainpage::on_AvviaStopButtonCronometro_clicked() {
+    if (!chronometerKeeper.isRunning()) {
+        chronometerKeeper.restartChronometer();
+        ui->DisplayError->clear();}
+    else chronometerKeeper.stopChronometer();
+}
+void mainpage::on_ResetCronometro_clicked(){
+    chronometerKeeper.restartChronometer();
+    ui->DisplayError->clear();
+    ui->listWidget->clear();
 }
 
+void mainpage::on_GiroButton_clicked(){
+    if (chronometerKeeper.isRunning())
+        ui->listWidget->insertItem(0, chronometerKeeper.getTimeString());
+    else{
+        ui->DisplayError->setText("devi avviare il cronometro");
+        delay();
+        ui->DisplayError->clear();
+
+    }
+
+}
+void mainpage::delay() {
+    QTime dieTime= QTime::currentTime().addSecs(3);
+    while (QTime::currentTime() < dieTime)
+        QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+}
 
 
 //--------set view mode-----------------

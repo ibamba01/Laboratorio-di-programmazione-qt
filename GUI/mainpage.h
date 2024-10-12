@@ -9,9 +9,9 @@
 #include <QTimer>
 #include "mainpage.h"
 #include <memory>
-#include "QT classes/QtClock.h"
-#include "QT classes/QtTimer.h"
-#include "QT classes/QtChronometer.h"
+#include "../QT classes/QtClock.h"
+#include "../QT classes/QtTimer.h"
+#include "../QT classes/QtChronometer.h"
 
 
 
@@ -52,10 +52,10 @@ private slots:
     void on_RadioData2_clicked();
     void on_RadioData3_clicked();
     void on_AvviaStopButtonTimer_clicked();
-    void on_AvviaResetButtonCronometro_clicked();
-
-
-
+    void on_AvviaStopButtonCronometro_clicked();
+    void on_GiroButton_clicked();
+    void on_ResetCronometro_clicked();
+    void delay();
 
 private:
     Ui::mainpage * ui;

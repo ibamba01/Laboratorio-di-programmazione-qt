@@ -15,6 +15,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QTabWidget>
@@ -65,8 +66,13 @@ public:
     QLabel *label;
     QWidget *ChronometerTab;
     QLabel *CronometroLable;
-    QPushButton *AvviaResetButtonCronometro;
+    QPushButton *AvviaStopButtonCronometro;
     QLabel *DisplayCronometro;
+    QLabel *LapLabel;
+    QPushButton *GiroButton;
+    QLabel *DisplayError;
+    QListWidget *listWidget;
+    QPushButton *ResetCronometro;
 
     void setupUi(QWidget *mainpage)
     {
@@ -248,18 +254,33 @@ public:
         CronometroLable->setObjectName("CronometroLable");
         CronometroLable->setGeometry(QRect(10, 0, 101, 51));
         CronometroLable->setFont(font1);
-        AvviaResetButtonCronometro = new QPushButton(ChronometerTab);
-        AvviaResetButtonCronometro->setObjectName("AvviaResetButtonCronometro");
-        AvviaResetButtonCronometro->setGeometry(QRect(70, 120, 161, 24));
+        AvviaStopButtonCronometro = new QPushButton(ChronometerTab);
+        AvviaStopButtonCronometro->setObjectName("AvviaStopButtonCronometro");
+        AvviaStopButtonCronometro->setGeometry(QRect(70, 120, 161, 24));
         DisplayCronometro = new QLabel(ChronometerTab);
         DisplayCronometro->setObjectName("DisplayCronometro");
         DisplayCronometro->setGeometry(QRect(70, 90, 161, 31));
         DisplayCronometro->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        LapLabel = new QLabel(ChronometerTab);
+        LapLabel->setObjectName("LapLabel");
+        LapLabel->setGeometry(QRect(10, 170, 61, 21));
+        GiroButton = new QPushButton(ChronometerTab);
+        GiroButton->setObjectName("GiroButton");
+        GiroButton->setGeometry(QRect(230, 120, 75, 24));
+        DisplayError = new QLabel(ChronometerTab);
+        DisplayError->setObjectName("DisplayError");
+        DisplayError->setGeometry(QRect(80, 140, 141, 31));
+        listWidget = new QListWidget(ChronometerTab);
+        listWidget->setObjectName("listWidget");
+        listWidget->setGeometry(QRect(60, 170, 71, 101));
+        ResetCronometro = new QPushButton(ChronometerTab);
+        ResetCronometro->setObjectName("ResetCronometro");
+        ResetCronometro->setGeometry(QRect(20, 120, 51, 24));
         tabWidget->addTab(ChronometerTab, QString());
 
         retranslateUi(mainpage);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(mainpage);
@@ -294,8 +315,12 @@ public:
         label->setText(QCoreApplication::translate("mainpage", "I valori inseriti nel campo devono essere della forma hh:mm:ss", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(TimerTab), QCoreApplication::translate("mainpage", "Timer", nullptr));
         CronometroLable->setText(QCoreApplication::translate("mainpage", "Cronometro", nullptr));
-        AvviaResetButtonCronometro->setText(QCoreApplication::translate("mainpage", "Avvia/Reset", nullptr));
+        AvviaStopButtonCronometro->setText(QCoreApplication::translate("mainpage", "Avvia/Stop", nullptr));
         DisplayCronometro->setText(QCoreApplication::translate("mainpage", "00:00:00", nullptr));
+        LapLabel->setText(QCoreApplication::translate("mainpage", "Last lap:", nullptr));
+        GiroButton->setText(QCoreApplication::translate("mainpage", "Giro", nullptr));
+        DisplayError->setText(QString());
+        ResetCronometro->setText(QCoreApplication::translate("mainpage", "Reset", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(ChronometerTab), QCoreApplication::translate("mainpage", "Chrono", nullptr));
     } // retranslateUi
 
