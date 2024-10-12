@@ -31,3 +31,33 @@ TEST(TimeTest,changeTimeFormattest){
     t2.setViewModeTime(TimeFormat::HM);
     ASSERT_FALSE(t1.showTime()==t2.showTime());
 }
+TEST(DateTest, setDateTest){
+    QtClock d;
+
+    ASSERT_NO_THROW(d.setDate(2024,10,12));
+    d.setViewModeDate(DateFormat::DMY);
+    ASSERT_EQ(d.showDate(),"12/10/24");
+}
+
+TEST(DateTest, showDateTest){
+    QtClock d;
+
+    d.setDate(2024,10,12);
+    ASSERT_EQ(d.showDate(),"12/10/24");
+
+    d.setViewModeDate(DateFormat::GDM);
+    ASSERT_EQ(d.showDate(),"Sat 12 Oct");
+
+    d.setViewModeDate(DateFormat::GMA);
+    ASSERT_EQ(d.showDate(),"Saturday October 2024");
+}
+
+TEST(DateTest, changeDateFormatTest){
+    QtClock d1;
+    d1.setDate(2024,10,12);
+    QtClock d2;
+    d2.setDate(2024,10,12);
+    d2.setViewModeDate(DateFormat::DMY);
+    ASSERT_TRUE(d1.showDate()==d2.showDate());
+}
+

@@ -39,13 +39,13 @@ QString QtClock::showDate() const {
     QString uscita;
     switch (viewModeDate) {
         default:// DateFormat::DMY;
-            uscita="dd/MM/yy";
+            uscita= "d/MM/yy";
             break;
         case DateFormat::GDM: //formato giorno numero mese
-            uscita="dddd dd MMM";
+            uscita= "ddd dd MMM";
             break;
         case DateFormat::GMA: //formato giorno mese anno
-            uscita="dddd MMMM yyyy";
+            uscita= "dddd MMMM yyyy";
             break;
     }
     return Date.toString(uscita);
