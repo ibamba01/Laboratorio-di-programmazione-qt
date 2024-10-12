@@ -19,6 +19,7 @@ public:
     bool startTimer();
     bool stopTimer();
     bool setTimer(QTime time);
+    bool setTimer(int time);
 
     void pause();
 

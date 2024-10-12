@@ -31,8 +31,9 @@ public:
 
     ~mainpage() override;
 
-    void currentQTimeToTime(int& h, int &m, int&s) const;
-    void currentQDateToDate(int& d,int& m,int& y) const;
+    void currentQTimeToTime(int& hours, int & min, int & sec) const;
+    void currentQDateToDate(int& day, int& month ,int& year) const;
+    void setUp();
 
 
 private slots:

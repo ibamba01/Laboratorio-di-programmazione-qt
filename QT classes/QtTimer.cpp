@@ -34,7 +34,14 @@ bool QtTimer::stopTimer(){
 bool QtTimer::setTimer(QTime time) { //imposta il timer
     if (isRunning())
         return false;
-    timer.setInterval((-1) * time.msecsTo(QTime(0, 0, 0, 0)));
+    timer.setInterval(QTime(0,0).msecsTo(time));
+    return true;
+}
+
+bool QtTimer::setTimer(int time) {
+    if (isRunning())
+        return false;
+    timer.setInterval(time);
     return true;
 }
 

@@ -17,7 +17,7 @@ mainpage::mainpage(QWidget *parent) :
     updater = new QTimer(this);
     QObject::connect(updater,SIGNAL(timeout()),this,SLOT(Update()));
     updater->start(1000); //aggiorna ogni secondo
-
+    setUp();
 }
 
 mainpage::~mainpage() {
@@ -27,21 +27,37 @@ mainpage::~mainpage() {
    // delete chronometerKeeper;
 }
 
+void mainpage::setUp() {
+    //inizializzo i radio button
+    ui->RadioOra1->setChecked(true);
+    ui->RadioData2->setChecked(true);
+    //inizializzo i colori
+    QString blue = "color: Blue";
+    ui->OrologioLable->setStyleSheet(blue);
+    ui->CronometroLable->setStyleSheet(blue);
+    ui->TimerLabel->setStyleSheet(blue);
+    QString red = "color: Red";
+    ui->OraLabel_2->setStyleSheet(red);
+    ui->DataLabel->setStyleSheet(red);
+    //inizializzo la tab
+    ui->tabWidget->setCurrentIndex(0);
+}
+
 //------------metodi current----------------
-void mainpage::currentQTimeToTime(int &h, int &m, int &s) const {
+void mainpage::currentQTimeToTime(int & hours, int & min, int & sec) const {
     QTime currentTime = QTime::currentTime();
     int msec = currentTime.msecsSinceStartOfDay();
-    s = msec/1000;
-    m = s/60;
-    h = m/60;
-    s=s%60;
-    m=m%60;
+    sec = msec / 1000;
+    min = sec / 60;
+    hours = min / 60;
+    sec = sec % 60;
+    min = min % 60;
 }
-void mainpage::currentQDateToDate(int &year, int &month, int &day) const {
+void mainpage::currentQDateToDate(int & year, int & month, int & day) const {
     QDate currentDate = QDate::currentDate();
-    day=currentDate.day();
-    month=currentDate.month();
-    year=currentDate.year();
+    day = currentDate.day();
+    month = currentDate.month();
+    year = currentDate.year();
 }
 
 //------------set timer----------------
@@ -142,12 +158,12 @@ void mainpage::Update(){
     //classe QtClock
     currentQTimeToTime(h,m,s);
     clockKeeper.setTime(h,m,s);
-    ui->DisplayOra->setText(clockKeeper.showTime());
+    ui->DisplayOra_2->setText(clockKeeper.showTime());
     //DisplayOra è il nome del label inizializzata a 00:00:00 che viene usata vedere l'ora
 
-    int d,mon,y;
-    currentQDateToDate(d,mon,y);
-    clockKeeper.setDate(d,mon,y);
+    int day,month,year;
+    currentQDateToDate(day,month,year);
+    clockKeeper.setDate(day,month,year);
     ui->DisplayData->setText(clockKeeper.showDate());
     //DisplayData è il nome del label inizializzata a 00:00:0000 che viene usata vedere i tre tipi di data
 
