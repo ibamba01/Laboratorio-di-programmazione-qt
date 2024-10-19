@@ -16,11 +16,14 @@ class QtClock {
 public:
     QtClock();
     ~QtClock();
-    void setTime(int h, int m, int s); //faccio passare l'ora e data da mainpage
-    void setDate(int d, int m, int y);
+    bool setTime(int h, int m, int s); //faccio passare l'ora e data da mainpage
+    bool setDate(int d, int m, int y);
+    void setTime1(int h, int m, int s);
 
     QString showTime() const;
     QString showDate() const;
+    bool currentTime(int  hours, int  min, int  sec);
+    bool currentDate(int  year, int  month, int  day);
 
     void setViewModeTime(TimeFormat f);
     void setViewModeDate(DateFormat f);

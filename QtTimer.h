@@ -19,11 +19,13 @@ public:
     bool startTimer();
     bool stopTimer();
     bool setTimer(QTime time);
+    // test che non posso fare settare un tempo sbagliato
     bool setTimer(int time);
 
     void pause();
 
-    QString GetTimeString() const;
+    QString getTimeString() const;
+    //cambia la G
 
     bool isRunning() const;
 

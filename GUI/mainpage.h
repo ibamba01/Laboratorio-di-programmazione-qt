@@ -29,8 +29,8 @@ public:
 
     ~mainpage() override;
 
-    void currentQTimeToTime(int& hours, int & min, int & sec) const;
-    void currentQDateToDate(int& day, int& month ,int& year) const;
+   // void currentQTimeToTime(int& hours, int & min, int & sec) const; //non piu usato
+   // void currentQDateToDate(int& day, int& month ,int& year) const;  //non piu usato
     void setUp();
 
 

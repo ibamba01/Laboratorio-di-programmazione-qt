@@ -12,11 +12,16 @@ QtClock::~QtClock(){
     //delete Date;
 }
 
-void QtClock::setTime(int h, int m, int s) {
-    Time.setHMS(h, m, s);
+bool QtClock::setTime(int h, int m, int s) { //deprecato
+    return Time.setHMS(h, m, s); //h nel range 0-23, m nel range 0-59, s nel range 0-59 senno ritorna false
+    //controllo se l'ora è valida e cosa sucecede se non lo è
 }
-void QtClock::setDate(int y, int m, int d) {
-    Date.setDate(y, m, d);
+void QtClock::setTime1(int h, int m, int s) { //deprecato
+     Time.setHMS(h, m, s);
+
+}
+bool QtClock::setDate(int y, int m, int d) { //deprecato
+    return Date.setDate(y, m, d);
 }
 
 QString QtClock::showTime() const { // utilizzano i format di Qt
@@ -56,4 +61,23 @@ void QtClock::setViewModeTime(TimeFormat timeFormat) {
 }
 void QtClock::setViewModeDate(DateFormat dateFormat) {
     viewModeDate = dateFormat;
+}
+
+bool QtClock::currentTime(int hours, int min, int sec)  {
+    QTime currentTime = QTime::currentTime();
+    int msec = currentTime.msecsSinceStartOfDay();
+    sec = msec / 1000;
+    min = sec / 60;
+    hours = min / 60;
+    sec = sec % 60;
+    min = min % 60;
+    return Time.setHMS(hours,min,sec);
+}
+
+bool QtClock::currentDate(int  year, int  month, int  day)  {
+    QDate currentDate = QDate::currentDate();
+    day = currentDate.day();
+    month = currentDate.month();
+    year = currentDate.year();
+    return Date.setDate(year,month,day);
 }

@@ -51,7 +51,7 @@ void QtTimer::pause() {
     timer.setInterval(remainingTime);
 }
 
-QString QtTimer::GetTimeString() const {
+QString QtTimer::getTimeString() const {
     int totalSeconds = timer.remainingTime() / 1000;
 
     int hours = totalSeconds / 3600;
@@ -61,3 +61,6 @@ QString QtTimer::GetTimeString() const {
     QTime uscita(hours, minutes, seconds);
     return uscita.toString("hh:mm:ss");
 }
+
+//ogni volta che viene chiamato geyTimeString() il timer sullo schermo fa vedere quanti secondi mancano
+//aggiornando lo schermo

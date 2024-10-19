@@ -5,11 +5,22 @@
 #include "../QtClock.h"
 
 
-TEST(TimeTest,setTime) {
+TEST(TimeTest, setTimeTest) {
     QtClock t;
     ASSERT_NO_THROW(t.setTime(10,24,20));
     t.setViewModeTime(TimeFormat::HMS);
     ASSERT_EQ(t.showTime(),"10:24:20");
+    t.setTime(0,0,0);
+    ASSERT_EQ(t.showTime(),"00:00:00");
+    ASSERT_FALSE(t.setTime(-12,0,0)); //ora negativa settime deve ritornare false
+    ASSERT_FALSE(t.setTime(25,44,0)); //ora fuori dall intervallo 0-23 devere ritornare false
+}
+
+TEST(TimeTest, currentTimeTest){
+    QtClock t;
+    int h,m,s;
+    ASSERT_NO_THROW(t.currentTime(h,m,s));
+    ASSERT_TRUE(t.currentTime(h,m,s));
 }
 
 TEST(TimeTest, showTimeTest){
@@ -37,6 +48,16 @@ TEST(DateTest, setDateTest){
     ASSERT_NO_THROW(d.setDate(2024,10,12));
     d.setViewModeDate(DateFormat::DMY);
     ASSERT_EQ(d.showDate(),"12/10/24");
+
+    ASSERT_FALSE(d.setDate(2024,10,0)); //giorno 0 non esiste
+    ASSERT_FALSE(d.setDate(2002, 2, 30)); //Feb 30 does not exist
+}
+
+TEST(DateTest, currentDateTest) {
+    QtClock d;
+    int y, m, day;
+    ASSERT_NO_THROW(d.currentDate(y, m, day));
+    ASSERT_TRUE(d.currentDate(y, m, day));
 }
 
 TEST(DateTest, showDateTest){
@@ -60,4 +81,5 @@ TEST(DateTest, changeDateFormatTest){
     d2.setViewModeDate(DateFormat::DMY);
     ASSERT_TRUE(d1.showDate()==d2.showDate());
 }
+
 
