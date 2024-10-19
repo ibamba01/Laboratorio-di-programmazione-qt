@@ -72,6 +72,7 @@ TEST(DateTest, showDateTest){
     d.setViewModeDate(DateFormat::GMA);
     ASSERT_EQ(d.showDate(),"Saturday October 2024");
 }
+//test
 
 TEST(DateTest, changeDateFormatTest){
     QtClock d1;
